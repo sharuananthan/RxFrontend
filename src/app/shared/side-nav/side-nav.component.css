@@ -1,15 +1,14 @@
-
-  /* --blue: #347AE2;
+/* --blue: #347AE2;
   --white: #ECEFF4; */
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 
 mat-sidenav {
   width: 250px;
   /* border-right: none; */
-  background: #ECEFF4;
+  background: #eceff4;
   color: white;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
-    font-size: 20px;
+  font-size: 20px;
 }
 .content {
   background-color: var(--blue);
@@ -32,7 +31,6 @@ mat-sidenav-container {
   height: 35px;
   border-radius: 20px 0px 0px 20px;
   margin-left: 12px;
-
 }
 .menu-button mat-icon {
   margin-right: 8px;
@@ -46,8 +44,6 @@ mat-sidenav-container {
   /* margin-left: 80px; */
   /* margin-bottom: 20px; */
   margin: 16px 0px 20px 80px;
-
-
 }
 
 .name {
