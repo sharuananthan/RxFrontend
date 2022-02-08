@@ -1,5 +1,4 @@
-/* --blue: #347AE2;
-  --white: #ECEFF4; */
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 
 mat-sidenav-container {
@@ -7,8 +6,8 @@ mat-sidenav-container {
 }
 mat-sidenav {
   width: 250px;
-  background: #eceff4;
-  color: white;
+  background: var(--navWhite);
+  color: var(--black);
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-size: 20px;
   border: none;
@@ -33,7 +32,7 @@ mat-sidenav {
   font-size: 1rem;
   height: 35px;
   border-radius: 20px 0px 0px 20px;
-  color: #347ae2;
+
 }
 .menu-button mat-icon {
   margin-left: 8px;
