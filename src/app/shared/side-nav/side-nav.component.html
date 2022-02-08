@@ -8,34 +8,42 @@
 </button>
 
 <mat-sidenav-container>
-  <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
-    <img class="logo mat-elevation-z8" src="../../../assets/logo/rx.png" />
+  <mat-sidenav #sidenav="matSidenav">
+    <div class="logo">
+    <img  src="../../../assets/logo/rx.png" />
+  </div>
+
 
     <mat-divider></mat-divider>
-
-    <button mat-button style="background: #347AE2" class="menu-button">
-      <span>Dashboard</span>
-    </button>
-    <button mat-button class="menu-button">
-      <span>Subscriptions</span>
-    </button>
-    <button mat-button class="menu-button">
-      <span>Customers</span>
-    </button>
-    <button mat-button class="menu-button">
-      <span>Products</span>
-    </button>
-    <button mat-button class="menu-button">
-      <span>Transactions</span>
-    </button>
-    <button mat-button class="menu-button">
-      <span>Settings</span>
-    </button>
-    <button mat-button class="menu-button">
-      <span>Help!</span>
-    </button>
+    <div class="nav-container">
+      <button
+        mat-button
+        style="background: #347ae2; color: white"
+        class="menu-button"
+      >
+        <span>Dashboard</span>
+      </button>
+      <button mat-button class="menu-button">
+        <span>Subscriptions</span>
+      </button>
+      <button mat-button class="menu-button">
+        <span>Customers</span>
+      </button>
+      <button mat-button class="menu-button">
+        <span>Products</span>
+      </button>
+      <button mat-button class="menu-button">
+        <span>Transactions</span>
+      </button>
+      <button mat-button class="menu-button">
+        <span>Settings</span>
+      </button>
+      <button mat-button class="menu-button">
+        <span>Help!</span>
+      </button>
+    </div>
   </mat-sidenav>
   <mat-sidenav-content>
-    <div class="content mat-elevation-z8">Main content here!</div>
+    <div class="content">Main content here!</div>
   </mat-sidenav-content>
 </mat-sidenav-container>
