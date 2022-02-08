@@ -1,11 +1,15 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 
-mat-sidenav-container {
+mat-icon-button{
+  width: 100px;
+}
+.mat-sidenav-container {
+  display: flex;
   height: 100%;
 }
-mat-sidenav {
-  width: 250px;
+.mat-sidenav {
+  min-width: 250px;
   background: var(--navWhite);
   color: var(--black);
   font-family: "Poppins", Arial, Helvetica, sans-serif;
@@ -40,6 +44,9 @@ mat-sidenav {
 .content {
   font-size: 2rem;
   color: black;
+}
+.mat-sidenav-content{
+  width: 100%;
 }
 mat-divider {
   margin-top: 16px;
