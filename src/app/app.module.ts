@@ -13,12 +13,6 @@ import { HelpModule } from './modules/help/help.module';
 import { SubscriptionModule } from './modules/subscription/subscription.module';
 import { ProductModule } from './modules/product/product.module';
 
-
-
-
-
-
-
 @NgModule({
   declarations: [
     AppComponent

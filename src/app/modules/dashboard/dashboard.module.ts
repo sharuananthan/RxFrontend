@@ -16,7 +16,8 @@ import { DashboardRoutes } from './dashboard-routing.module';
   imports: [
     CommonModule,
     SharedModule,
-    DashboardRoutes
+    DashboardRoutes,
+
 
   ],exports: [
 

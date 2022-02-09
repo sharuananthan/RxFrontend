@@ -1,8 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { TopBarComponent } from './shared/components/top-bar/top-bar.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: '',
+  loadChildren: () =>
+      import('./modules/home/home.module').then((m) => m.HomeModule),
+ },
   {
     path: 'auth',
     loadChildren: () =>
@@ -46,6 +50,10 @@ const routes: Routes = [
       import('./modules/subscription/subscription.module').then(
         (m) => m.SubscriptionModule
       ),
+  },
+  {
+    path: 'top',
+    component: TopBarComponent,
   },
 ];
 
