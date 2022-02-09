@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CustomerComponent } from './customer-main/customer.component';
 import { CustomerRoutes } from './customer-routing.module';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 @NgModule({
@@ -10,7 +11,8 @@ import { CustomerRoutes } from './customer-routing.module';
   ],
   imports: [
     CommonModule,
-    CustomerRoutes
+    CustomerRoutes,
+    SharedModule
 
   ],exports: [
   ]
