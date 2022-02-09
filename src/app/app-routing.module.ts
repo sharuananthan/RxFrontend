@@ -1,13 +1,36 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AuthModule } from './auth/auth.module';
-import { LoginComponent } from './auth/login/login.component';
-import { DashboardComponent } from './dashboard/dash-board/dashboard.component';
+
 
 
 const routes: Routes = [
-  { path: 'login', component: LoginComponent },
-  { path: 'home', component: DashboardComponent }
+  { path: '',
+    redirectTo: '/dashboard',
+    pathMatch: 'full'
+  },
+  { path: 'auth',
+    loadChildren: () => import('./modules/auth/auth.module').then(m => m.AuthModule)
+  },
+  { path: 'transaction',
+    loadChildren: () => import('./modules/transaction/transaction.module').then(m => m.TransactionModule )
+},
+  { path: 'dashboard',
+  loadChildren: () => import('./modules/dashboard/dashboard.module').then(m => m.DashboardModule )
+},
+  { path: 'customer',
+  loadChildren: () => import('./modules/customer/customer.module').then(m => m.CustomerModule )
+},
+  { path: 'help',
+   loadChildren: () => import('./modules/help/help.module').then(m => m.HelpModule )
+  },
+  { path: 'product',
+  loadChildren: () => import('./modules//product/product.module').then(m => m.ProductModule )
+ },
+
+  { path: 'subscription',
+  loadChildren: () => import('./modules/subscription/subscription.module').then(m => m.SubscriptionModule )
+}
+
 
 ];
 

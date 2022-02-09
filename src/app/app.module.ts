@@ -4,9 +4,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AuthModule } from './modules/auth/auth.module';
+import { DashboardModule } from './modules/dashboard/dashboard.module';
+import { CoreModule } from './core/core.module';
+import { DataModule } from './data/data.module';
+import { CustomerModule } from './modules/customer/customer.module';
+import { HelpModule } from './modules/help/help.module';
+import { SubscriptionModule } from './modules/subscription/subscription.module';
+import { ProductModule } from './modules/product/product.module';
 
-import { AuthModule } from './auth/auth.module';
-import { DashboardModule } from './dashboard/dashboard.module';
+
 
 
 
@@ -14,7 +21,7 @@ import { DashboardModule } from './dashboard/dashboard.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
 
   ],
   imports: [
@@ -24,6 +31,14 @@ import { DashboardModule } from './dashboard/dashboard.module';
     BrowserAnimationsModule,
     AuthModule,
     DashboardModule,
+    CoreModule,
+    DataModule,
+    CustomerModule,
+    HelpModule,
+    SubscriptionModule,
+    ProductModule
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]
