@@ -12,3 +12,14 @@ body {
   --navWhite: #ECEFF4;
   --black :black;
 }
+.app-container{
+  display: flex;
+  height: 100%;
+}
+.content{
+  width: 100%;
+}
+.right-align{
+  display: flex;
+  justify-content: flex-end;
+}

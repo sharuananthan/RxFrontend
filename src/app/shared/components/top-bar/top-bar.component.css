@@ -1,0 +1,15 @@
+.logo img {
+  margin-top: 10px;
+  width: 100px;
+  height: 100px;
+  margin-left: 50px;
+}
+.top-content{
+  display: flex;
+  justify-content:space-between;
+  height: 130px;
+  background-color: var(--navWhite);
+}
+app-profile{
+  margin-top: 20px;
+}
