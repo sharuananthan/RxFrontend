@@ -5,6 +5,7 @@ import { SharedModule } from '../../shared/shared.module';
 import { DashboardComponent } from './dashboard-main/dashboard.component';
 import { DashboardRoutes } from './dashboard-routing.module';
 import { GraphComponent } from './graph/graph.component';
+import { ChartsModule } from 'ng2-charts';
 
 
 
@@ -12,13 +13,14 @@ import { GraphComponent } from './graph/graph.component';
   declarations: [
     DashboardTitleComponent,
     DashboardComponent,
-    GraphComponent
+    GraphComponent,
 
   ],
   imports: [
     CommonModule,
     SharedModule,
     DashboardRoutes,
+    ChartsModule
 
 
   ],exports: [
