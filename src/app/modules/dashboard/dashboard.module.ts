@@ -4,13 +4,15 @@ import { DashboardTitleComponent } from './dashboard-title/dashboard-title.compo
 import { SharedModule } from '../../shared/shared.module';
 import { DashboardComponent } from './dashboard-main/dashboard.component';
 import { DashboardRoutes } from './dashboard-routing.module';
+import { GraphComponent } from './graph/graph.component';
 
 
 
 @NgModule({
   declarations: [
     DashboardTitleComponent,
-    DashboardComponent
+    DashboardComponent,
+    GraphComponent
 
   ],
   imports: [
