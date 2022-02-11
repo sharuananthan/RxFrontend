@@ -1,1 +1,10 @@
+.graph-container{
+  display: flex;
+  justify-content: space-evenly;
+}
 
+.graph{
+  width: 600px;
+  height: 350px;
+
+}

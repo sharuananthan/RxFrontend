@@ -12,6 +12,7 @@ import { CustomerModule } from './modules/customer/customer.module';
 import { HelpModule } from './modules/help/help.module';
 import { SubscriptionModule } from './modules/subscription/subscription.module';
 import { ProductModule } from './modules/product/product.module';
+import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ProductModule } from './modules/product/product.module';
     CustomerModule,
     HelpModule,
     SubscriptionModule,
-    ProductModule
+    ProductModule,
+    ChartsModule
 
 
   ],

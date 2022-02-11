@@ -4,8 +4,9 @@ import { DashboardTitleComponent } from './dashboard-title/dashboard-title.compo
 import { SharedModule } from '../../shared/shared.module';
 import { DashboardComponent } from './dashboard-main/dashboard.component';
 import { DashboardRoutes } from './dashboard-routing.module';
-import { DashboardGraphComponent } from './dashboard-graph/dashboard-graph/dashboard-graph.component';
 import { DashboardTableComponent } from './dashboard-table/dashboard-table/dashboard-table.component';
+import { GraphComponent } from './graph/graph.component';
+import { ChartsModule } from 'ng2-charts';
 
 
 
@@ -13,14 +14,15 @@ import { DashboardTableComponent } from './dashboard-table/dashboard-table/dashb
   declarations: [
     DashboardTitleComponent,
     DashboardComponent,
-    DashboardGraphComponent,
-    DashboardTableComponent
+    DashboardTableComponent,
+    GraphComponent
 
   ],
   imports: [
     CommonModule,
     SharedModule,
     DashboardRoutes,
+    ChartsModule
 
 
   ],exports: [
