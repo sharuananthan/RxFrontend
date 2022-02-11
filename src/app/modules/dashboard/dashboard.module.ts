@@ -6,6 +6,7 @@ import { DashboardComponent } from './dashboard-main/dashboard.component';
 import { DashboardRoutes } from './dashboard-routing.module';
 import { GraphComponent } from './graph/graph.component';
 import { ChartsModule } from 'ng2-charts';
+import { DashPieComponent } from './dash-pie/dash-pie.component';
 
 
 
@@ -14,6 +15,7 @@ import { ChartsModule } from 'ng2-charts';
     DashboardTitleComponent,
     DashboardComponent,
     GraphComponent,
+    DashPieComponent,
 
   ],
   imports: [
