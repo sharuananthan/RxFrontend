@@ -15,7 +15,7 @@ export class GraphComponent implements OnInit {
     this.lineChartLabels=this.graphData.chartLabels;
   }
   @Input() graphData:any;
-  public lineChartData!: any[];
+  lineChartData!: any[];
   lineChartLabels!: Label[];
   lineChartOptions: ChartOptions = {
     responsive: true
