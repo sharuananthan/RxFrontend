@@ -2,11 +2,10 @@
 html,
 body {
   height: 100%;
-}
-body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: Poppins;
 }
+
 :root {
   --primary-blue: #347AE2;
   --navWhite: #ECEFF4;
@@ -24,5 +23,3 @@ body {
   justify-content: flex-end;
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
