@@ -6,12 +6,16 @@
     </div>
     <app-dashboard-title></app-dashboard-title>
     <div class="graph-container">
-      <app-graph [graphData]="lineChartData" class="graph"></app-graph>
-      <app-graph [graphData]="lineChartData2" class="graph"></app-graph>
+      <!-- <app-graph [graphData]="lineChartData" class="graph"></app-graph>
+      <app-graph [graphData]="lineChartData2" class="graph"></app-graph> -->
+      <app-cureved-line class="graph"></app-cureved-line>
+      <app-cureved-line class="graph"></app-cureved-line>
     </div>
     <div class="pie-chart">
     <app-dash-pie></app-dash-pie>
+
   </div>
+  <app-cureved-line></app-cureved-line>
 
   </div>
 </div>

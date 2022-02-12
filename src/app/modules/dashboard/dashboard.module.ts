@@ -7,6 +7,7 @@ import { DashboardRoutes } from './dashboard-routing.module';
 import { GraphComponent } from './graph/graph.component';
 import { ChartsModule } from 'ng2-charts';
 import { DashPieComponent } from './dash-pie/dash-pie.component';
+import { CurevedLineComponent } from './cureved-line/cureved-line.component';
 
 
 
@@ -16,6 +17,7 @@ import { DashPieComponent } from './dash-pie/dash-pie.component';
     DashboardComponent,
     GraphComponent,
     DashPieComponent,
+    CurevedLineComponent,
 
   ],
   imports: [
