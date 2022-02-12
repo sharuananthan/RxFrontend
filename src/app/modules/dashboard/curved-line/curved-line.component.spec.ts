@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CurevedLineComponent } from './cureved-line.component';
+import { CurevedLineComponent } from './curved-line.component';
 
 describe('CurevedLineComponent', () => {
   let component: CurevedLineComponent;

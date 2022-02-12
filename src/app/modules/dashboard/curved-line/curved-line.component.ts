@@ -2,9 +2,9 @@ import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import * as Chart from 'chart.js';
 
 @Component({
-  selector: 'app-cureved-line',
-  templateUrl: './cureved-line.component.html',
-  styleUrls: ['./cureved-line.component.css']
+  selector: 'app-curved-line',
+  templateUrl: './curved-line.component.html',
+  styleUrls: ['./curved-line.component.css']
 })
 export class CurevedLineComponent implements AfterViewInit {
 
