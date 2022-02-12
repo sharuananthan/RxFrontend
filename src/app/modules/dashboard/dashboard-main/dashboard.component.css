@@ -28,6 +28,13 @@ border-radius: 10px;
   margin-left: 95px;
   margin-right: 95px;
 }
-.title{
-  margin: 100px;
+::ng-deep.mat-tab-label{
+  min-width: 325px!important;
+  background-color: var(--navWhite);
+ }
+
+
+.table-grp{
+  border-radius: 12px;
+  overflow:hidden !important;
 }
