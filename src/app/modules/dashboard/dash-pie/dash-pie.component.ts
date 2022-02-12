@@ -24,6 +24,12 @@ export class DashPieComponent implements OnInit {
 
       }
     },
+    // plugins: {
+    //   datalabels: {
+    //    formatter: (value, ctx) => {
+    //     const label = ctx.chart.data.labels[ctx.dataIndex];
+    //     return label;
+    //    },
     showLines: true,
     tooltips: {
       enabled: true,
