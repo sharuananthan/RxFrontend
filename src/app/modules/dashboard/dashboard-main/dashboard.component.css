@@ -5,7 +5,7 @@
 
 .graph{
   width: 500px;
-  height: 325px;
+  height: 250px;
   background-color: #F8FBFF;
   border-radius: 20px;
   box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.25);
@@ -17,8 +17,17 @@
 .pie-chart{
 
   width: 400px;
-  height: 300px;
+  height: 230px;
   background: #ECEFF4;
 box-shadow: 2px 5px 10px rgba(41, 44, 56, 0.25);
 border-radius: 10px;
+}
+.bottom-content{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 95px;
+  margin-right: 95px;
+}
+.title{
+  margin: 100px;
 }

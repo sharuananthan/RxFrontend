@@ -14,9 +14,11 @@ body {
 .app-container{
   display: flex;
   height: 100%;
+
 }
 .content{
   width: 100%;
+  margin-left: 250px;
 }
 .right-align{
   display: flex;

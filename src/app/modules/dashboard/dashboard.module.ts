@@ -10,7 +10,8 @@ import { ChartsModule } from 'ng2-charts';
 import { DashPieComponent } from './dash-pie/dash-pie.component';
 import { CurevedLineComponent } from './curved-line/curved-line.component';
 import { DashboardGridboxComponent } from './dashboard-gridbox/dashboard-gridbox.component';
-
+import {MatTableModule} from '@angular/material/table';
+import {MatTabsModule} from '@angular/material/tabs';
 
 
 @NgModule({
@@ -21,15 +22,17 @@ import { DashboardGridboxComponent } from './dashboard-gridbox/dashboard-gridbox
     GraphComponent,
     DashPieComponent,
     CurevedLineComponent,
-    DashboardGridboxComponent
+    DashboardGridboxComponent,
+
 
   ],
   imports: [
     CommonModule,
     SharedModule,
     DashboardRoutes,
-    ChartsModule
-
+    ChartsModule,
+  MatTableModule,
+  MatTabsModule
 
   ],exports: [
 
