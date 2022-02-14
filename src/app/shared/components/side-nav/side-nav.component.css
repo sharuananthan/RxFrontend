@@ -11,11 +11,14 @@ mat-icon-button{
   overflow-x: hidden;
 
 }
+.mat-button {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
 .mat-sidenav {
   min-width: 250px;
   background: var(--navWhite);
   color: var(--black);
-  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  /* font-family: "Poppins", Arial, Helvetica, sans-serif; */
   font-size: 20px;
   border: none;
 }
@@ -23,6 +26,8 @@ mat-icon-button{
   width: 100px;
   height: 100px;
   margin: 0 auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 .logo img {
   width: 100px;
