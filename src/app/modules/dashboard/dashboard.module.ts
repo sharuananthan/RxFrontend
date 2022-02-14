@@ -29,7 +29,8 @@ import { DashboardGridboxComponent } from './dashboard-gridbox/dashboard-gridbox
 
   ],exports: [
 
-  ]
+  ],
+  bootstrap: [DashboardTableComponent]
 
 })
 export class DashboardModule { }

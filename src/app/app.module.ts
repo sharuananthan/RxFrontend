@@ -14,9 +14,11 @@ import { SubscriptionModule } from './modules/subscription/subscription.module';
 import { ProductModule } from './modules/product/product.module';
 import { ChartsModule } from 'ng2-charts';
 
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    
 
   ],
   imports: [
