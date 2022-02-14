@@ -13,6 +13,7 @@ mat-icon-button{
 }
 .mat-button {
   font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-weight: bold;
 }
 .mat-sidenav {
   min-width: 250px;
