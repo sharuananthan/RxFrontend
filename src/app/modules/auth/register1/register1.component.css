@@ -1,7 +1,7 @@
 .register-container {
   display: flex;
   width: 100%;
-
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
   height: 100%;
 }
 .left-cont {
@@ -71,7 +71,7 @@ input[type="file"] {
   width: 100%;
 }
 .title {
-  font-size: 72px;
+  font-size: 50px;
   font-weight: bold;
   text-align: start;
 }
@@ -91,4 +91,8 @@ input[type="file"] {
 }
 .imgup div {
   text-align: center;
+}
+label{
+  font-weight: bold;
+  font-family: 'Poppins';
 }
