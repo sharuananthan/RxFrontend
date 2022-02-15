@@ -1,0 +1,78 @@
+<div class="register-container">
+  <div class="left-cont">
+    <img src="assets/logo/rx.png"  routerLink="/dashboard" alt="" />
+  </div>
+  <div class="right-cont">
+
+    <form>
+      <div class="title">Register</div>
+      <div class="form-group">
+        <label>Full Name</label>
+        <div>
+          <input type="text" formControlName="fullName" />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>E-mail Address</label>
+        <div>
+          <input type="text" formControlName="email"  />
+        </div>
+      </div>
+      <div class="form-group">
+        <label>User Name</label>
+        <div>
+          <input type="text" formControlName="userName" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Password</label>
+        <div>
+          <input
+            type="password"
+            formControlName="password"
+          />
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Re-Enter Password</label>
+        <div>
+          <input
+            type="password"
+            formControlName="confirmPassword"
+          />
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Company Name</label>
+        <div>
+          <input
+            type="text"
+            formControlName="companyName"
+          />
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Logo</label>
+        <div class="imgup">
+          <div class="icon-container">
+          <img src="assets/icons/img.png"
+
+          alt=""/>
+          <div>Drop your image here, or browse</div>
+        </div>
+          <input
+            id="fileUpload"
+            type="file"
+            accept="image/*"
+            formControlName="logo"
+          >
+        </div>
+      </div>
+
+      <div class="form-group">
+        <button class="btn" routerLink="/signup2">Next</button>
+      </div>
+    </form>
+  </div>
+</div>
