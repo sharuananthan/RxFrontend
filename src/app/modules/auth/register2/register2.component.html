@@ -3,37 +3,68 @@
     <img src="assets/logo/rx.png" routerLink="/dashboard" alt="" />
   </div>
   <div class="right-cont">
-    <form>
+    <form [formGroup]="registerForm2" (ngSubmit)="onSubmit()">
       <div class="form-group">
         <label>Description</label>
         <div class="description">
           <textarea type="textarea" rows="5" formControlName="description" ></textarea>
         </div>
+        <div *ngIf="f['description'].touched && f['description'].invalid">
+          <div *ngIf="f['description'].errors && f['description'].errors['required']">
+            Description name is Required
+          </div>
+        </div>
       </div>
       <div class="form-group">
         <label>Address</label>
         <div>
-          <input placeholder="Address Line 01" type="text" formControlName="email" />
+          <input placeholder="Address Line 01" type="text" formControlName="address1" />
+        </div>
+        <div *ngIf="f['address1'].touched && f['address1'].invalid">
+          <div *ngIf="f['address1'].errors && f['address1'].errors['required']">
+            Address name is Required
+          </div>
         </div>
 
         <div>
-          <input placeholder="Address Line 02" type="text" formControlName="userName" />
+          <input placeholder="Address Line 02" type="text" formControlName="address2" />
+        </div>
+        <div *ngIf="f['address2'].touched && f['address2'].invalid">
+          <div *ngIf="f['address2'].errors && f['address2'].errors['required']">
+            This field is Required
+          </div>
         </div>
 
         <div>
-          <input placeholder="City" type="text" formControlName="password" />
+          <input placeholder="City" type="text" formControlName="city" />
+        </div>
+        <div *ngIf="f['city'].touched && f['city'].invalid">
+          <div *ngIf="f['city'].errors && f['city'].errors['required']">
+            City is Required
+          </div>
         </div>
 
         <div>
-          <input placeholder="State/ Province/ Region" type="text" formControlName="confirmPassword" />
+          <input placeholder="State/ Province/ Region" type="text" formControlName="state" />
+        </div>
+        <div *ngIf="f['state'].touched && f['state'].invalid">
+          <div *ngIf="f['state'].errors && f['state'].errors['required']">
+            State is Required
+          </div>
         </div>
 
         <div>
-          <input placeholder="Country" type="text" formControlName="companyName" />
+          <input placeholder="Country" type="text" formControlName="country" />
+        </div>
+        <div *ngIf="f['country'].touched && f['country'].invalid">
+          <div *ngIf="f['country'].errors && f['country'].errors['required']">
+            Country is Required
+          </div>
         </div>
       </div>
       <div class="form-group">
         <label>Choose Plan</label>
+        <div>
         <div class="custom-control custom-radio label-cont">
           <input id="1month" type="radio" class="custom-control-input" value="1month" name="plan" formControlName="plan">
           <label class="custom-control-label1" for="1month">01 Month</label>
@@ -51,6 +82,8 @@
           <label class="custom-control-label" for="12months">$840.00</label>
         </div>
       </div>
+
+      </div>
       <div class="form-group">
         <label>Choose Plan Cycle</label>
         <div class="custom-control custom-radio">
@@ -65,7 +98,7 @@
       </div>
       <div class="form-group">
         <button class="btn" routerLink="/signup">Previous</button>
-        <button class="btn2" routerLink="/dashboard">Proceed Payment</button>
+        <button class="btn2" type="submit">Proceed Payment</button>
       </div>
     </form>
   </div>
