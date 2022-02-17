@@ -23,7 +23,7 @@ export class Register1Component implements OnInit {
       companyName:['',[Validators.required]],
     },
     {
-      validator: this.ConfirmedValidator('password', 'confirmPassword')
+      validator: this.ConfirmedValidator('password', 'confirmPassword'),
     }
     )
   }

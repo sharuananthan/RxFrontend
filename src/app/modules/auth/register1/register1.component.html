@@ -51,7 +51,7 @@
           <div *ngIf="f['password'].errors && f['password'].errors['required']">
             Password is required
           </div>
-          <div *ngIf="f['password'].errors && f['password'].errors['minLength']">
+          <div *ngIf="f['password'].errors && f['password'].errors['minlength']">
             Minimum length is 8
           </div>
         </div>
@@ -64,6 +64,9 @@
         <div *ngIf="f['confirmPassword'].touched && f['confirmPassword'].invalid">
           <div *ngIf="f['confirmPassword'].errors &&f['confirmPassword'].errors['required']">
             Confirm Password is required
+          </div>
+          <div *ngIf="f['confirmPassword'].errors && f['confirmPassword'].errors['minlength']">
+            Minimum length is 8
           </div>
           <div *ngIf="f['confirmPassword'].errors &&f['confirmPassword'].errors['confirmedValidator']">
             Password mismatch

@@ -5,21 +5,21 @@
   height: 100%;
 }
 .left-cont {
-  width: 40%;
+  width: 50%;
   height: 100vh;
   background-color: var(--navWhite);
   display: flex;
 
   justify-content: center;
   align-items: center;
-  border-radius: 0 86px 86px 0;
+  border-radius: 0 20px 20px 0;
 }
 .left-cont img {
   height: 377px;
   width: 377px;
 }
 .right-cont {
-  width: 60%;
+  width: 50%;
   height: 100vh;
   display: flex;
   justify-content: center;
