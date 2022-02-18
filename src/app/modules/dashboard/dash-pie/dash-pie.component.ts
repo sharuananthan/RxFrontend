@@ -20,7 +20,7 @@ export class DashPieComponent implements OnInit {
     },
     elements:{
       arc:{
-        borderWidth:4
+        borderWidth:1
 
       }
     },
