@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef,Input, ViewChild } from '@angular/core';
 import * as Chart from 'chart.js';
 
 @Component({
@@ -7,7 +7,7 @@ import * as Chart from 'chart.js';
   styleUrls: ['./curved-line.component.css']
 })
 export class CurevedLineComponent implements AfterViewInit {
-
+  @Input() graphData:any;
   @ViewChild('lineCanvas') lineCanvas!: ElementRef;
   lineChart: any;
 constructor() { }
@@ -74,7 +74,7 @@ lineChartMethod() {
     this.lineChart = new Chart(this.lineCanvas.nativeElement, {
       type: 'line',
       data: {
-        labels: ['JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'],
+        labels: this.graphData.chartLabels,
         datasets: [
           {
             label: "Data",
@@ -91,7 +91,7 @@ lineChartMethod() {
             pointHoverRadius: 4,
             pointHoverBorderWidth: 15,
             pointRadius: 4,
-            data: [80, 100, 70, 80, 120, 80],
+            data: this.graphData.data,
           }
         ]
       },

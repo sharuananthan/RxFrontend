@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 import { ChartType, ChartOptions } from 'chart.js';
 import {
   SingleDataSet,
