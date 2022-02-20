@@ -1,28 +1,33 @@
-.app-container{
+.app-container {
   display: flex;
   height: 100%;
 }
-/* .content{
-  width:1000px ;
-  background-color: aqua;
-} */
-.cont{
-  width:1000px;
+
+.cont {
+  width: 1000px;
   margin: 0 auto;
   height: 100%;
 }
-.title{
+.title-container {
+  background-color: var(--navWhite);
+  width: 90%;
+  margin: 0 auto;
+  height: 80px;
+  border-radius: 12px;
+  padding-top: 10px;
+  margin-bottom: 30px;
+  padding: 15px;
+}
 
+.title {
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
-  line-height: 36px;
   color: var(--primary-blue);
+}
 
-  }
-  .intro{
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 21px;
-  }
+.intro {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+}
