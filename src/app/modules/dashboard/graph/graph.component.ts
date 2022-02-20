@@ -2,11 +2,11 @@ import { AfterViewInit, Component, ElementRef,Input, ViewChild } from '@angular/
 import * as Chart from 'chart.js';
 
 @Component({
-  selector: 'app-curved-line',
-  templateUrl: './curved-line.component.html',
-  styleUrls: ['./curved-line.component.css']
+  selector: 'app-graph',
+  templateUrl: './graph.component.html',
+  styleUrls: ['./graph.component.css']
 })
-export class CurevedLineComponent implements AfterViewInit {
+export class GraphComponent implements AfterViewInit {
   @Input() graphData:any;
   @ViewChild('lineCanvas') lineCanvas!: ElementRef;
   lineChart: any;
