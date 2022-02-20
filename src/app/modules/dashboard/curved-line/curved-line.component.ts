@@ -22,7 +22,7 @@ lineChartMethod() {
     },
 
     tooltips: {
-      backgroundColor: 'rgba(52, 122, 226, 1)',
+      backgroundColor: 'rgba(255,255,255, 0.5)',
       titleFontColor: '#333',
       bodyFontColor: '#666',
       bodySpacing: 4,

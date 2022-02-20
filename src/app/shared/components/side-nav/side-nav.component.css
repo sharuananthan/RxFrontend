@@ -1,5 +1,4 @@
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 
 mat-icon-button{
   width: 100px;
@@ -19,7 +18,10 @@ mat-icon-button{
   min-width: 250px;
   background: var(--navWhite);
   color: var(--black);
+<<<<<<< HEAD
   /* font-family: "Poppins", Arial, Helvetica, sans-serif; */
+=======
+>>>>>>> subs
   font-size: 20px;
   border: none;
 }
