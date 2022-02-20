@@ -1,19 +1,21 @@
-
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
-
 mat-icon-button{
   width: 100px;
 }
 .mat-sidenav-container {
   display: flex;
   height: 100%;
+  position: fixed;
+  overflow-x: hidden;
 
+}
+.mat-button {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-weight: bold;
 }
 .mat-sidenav {
   min-width: 250px;
   background: var(--navWhite);
   color: var(--black);
-  font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-size: 20px;
   border: none;
 }
@@ -21,6 +23,8 @@ mat-icon-button{
   width: 100px;
   height: 100px;
   margin: 0 auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 .logo img {
   width: 100px;
