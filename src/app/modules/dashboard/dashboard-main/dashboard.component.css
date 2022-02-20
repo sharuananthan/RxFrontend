@@ -1,44 +1,44 @@
-.graph-container{
+.graph-container {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
-.graph{
-  width: 500px;
+.graph {
+  width: 600px;
   height: 300px;
-  background-color: #F8FBFF;
+  background-color: #f8fbff;
   border-radius: 20px;
   box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.25);
   margin-top: 20px;
-
-
-
 }
-.pie-chart{
+.side-container {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.pie-chart {
   margin-top: 20px;
 }
-.pie-chart-container{
-
-  width: 400px;
+.pie-chart-container {
+  width: 420px;
   height: 250px;
-  background: #ECEFF4;
-box-shadow: 2px 5px 10px rgba(41, 44, 56, 0.25);
-border-radius: 10px;
-padding-top: 50px;
+  background: #eceff4;
+  box-shadow: 2px 5px 10px rgba(41, 44, 56, 0.25);
+  border-radius: 10px;
+  padding-top: 50px;
 }
-.bottom-content{
+.bottom-content {
   display: flex;
   justify-content: space-between;
-  margin-left: 95px;
-  margin-right: 95px;
+  margin-top: 30px;
 }
-::ng-deep.mat-tab-label{
-  min-width: 325px!important;
+::ng-deep.mat-tab-label {
+  min-width: 435px !important;
   background-color: var(--navWhite);
- }
+}
 
-
-.table-grp{
+.table-grp {
   border-radius: 12px;
-  overflow:hidden !important;
+  overflow: hidden !important;
+  /* width: 800px; */
 }
