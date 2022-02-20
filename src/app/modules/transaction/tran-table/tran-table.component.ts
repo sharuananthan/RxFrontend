@@ -1,7 +1,9 @@
 import {LiveAnnouncer} from '@angular/cdk/a11y';
 import {AfterViewInit, Component, ViewChild} from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import {MatSort, Sort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
+import { DialogComponent } from '../dialog/dialog.component';
 export interface PeriodicElement {
   date: number;
   transactionID: string;
@@ -26,7 +28,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
 export class TranTableComponent implements AfterViewInit {
   displayedColumns: string[] = ['date', 'transactionID', 'subscriptionID', 'transactionStatus','amount'];
   dataSource = new MatTableDataSource(ELEMENT_DATA);
-  constructor(private _liveAnnouncer: LiveAnnouncer) { }
+  constructor(private _liveAnnouncer: LiveAnnouncer,private _dialog:MatDialog) { }
 
   @ViewChild(MatSort) sort!: MatSort;
 
@@ -41,6 +43,15 @@ export class TranTableComponent implements AfterViewInit {
       } else {
         this._liveAnnouncer.announce('Sorting cleared');
       }
+    }
+    openDialog(row: PeriodicElement) {
+      console.log('Row clicked', row);
+      const dialog = this._dialog.open(DialogComponent, {
+        width: '450px',
+        height: '500px',
+        // Can be closed only by clicking the close button
+        data: row
+      });
     }
 
 

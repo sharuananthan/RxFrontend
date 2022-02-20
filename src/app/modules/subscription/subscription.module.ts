@@ -7,20 +7,23 @@ import { SubGridComponent } from './sub-grid/sub-grid.component';
 import { SubTableComponent } from './sub-table/sub-table.component';
 import {MatSortModule} from '@angular/material/sort';
 import {MatTableModule} from '@angular/material/table';
+import {MatDialogModule} from '@angular/material/dialog';
+import { DialogComponent } from './dialog/dialog.component';
 
 
 @NgModule({
   declarations: [
     SubscriptionComponent,
     SubGridComponent,
-    SubTableComponent
+    SubTableComponent,
+    DialogComponent
   ],
   imports: [
     CommonModule,
     SubscriptionRoutes,
     SharedModule,
     MatSortModule,
-    MatTableModule
+    MatTableModule,MatDialogModule
 
   ],exports: [
 
