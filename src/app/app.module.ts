@@ -13,12 +13,10 @@ import { HelpModule } from './modules/help/help.module';
 import { SubscriptionModule } from './modules/subscription/subscription.module';
 import { ProductModule } from './modules/product/product.module';
 import { ChartsModule } from 'ng2-charts';
+import { ReportsModule } from './modules/reports/reports.module';
 
 @NgModule({
-  declarations: [
-    AppComponent
-
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -32,11 +30,10 @@ import { ChartsModule } from 'ng2-charts';
     HelpModule,
     SubscriptionModule,
     ProductModule,
-    ChartsModule
-
-
+    ChartsModule,
+    ReportsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
