@@ -12,13 +12,13 @@ export interface Customer {
 
 }
 const CUSTOMER_DATA: Customer[] = [
-  {customerID: "1",name: 'Hydrogen', netRevenue: "enadoc", status: 'H',totalAmount:100,email:"abc@gmail.com"},
-  {customerID: "2",name: 'Helium', netRevenue:"enadoc", status: 'He',totalAmount:100,email:"abc@gmail.com"},
-  {customerID:"3",name: 'Lithium', netRevenue: "enadoc", status: 'Li',totalAmount:100,email:"abc@gmail.com"},
-  {customerID: "4",name: 'Beryllium', netRevenue:"enadoc", status: 'Be',totalAmount:100,email:"abc@gmail.com"},
-  {customerID: "5",name: 'Boron', netRevenue: "enadoc", status: 'B',totalAmount:100,email:"abc@gmail.com"},
-  {customerID: "6",name: 'Carbon', netRevenue: "enadoc", status: 'C',totalAmount:100,email:"abc@gmail.com"},
-  {customerID: "7",name: 'Nitrogen', netRevenue: "enadoc", status: 'N',totalAmount:100,email:"abc@gmail.com"},
+  {customerID: "1",name: 'Sulegjan', netRevenue: "100$", status: 'Active',totalAmount:100,email:"abc@gmail.com"},
+  {customerID: "2",name: 'Ajeevitha', netRevenue:"200$", status: 'Active',totalAmount:100,email:"abc@gmail.com"},
+  {customerID:"3",name: 'Akshayan', netRevenue: "150$", status: 'Active',totalAmount:100,email:"abc@gmail.com"},
+  {customerID: "4",name: 'Dasikaran', netRevenue:"170$", status: 'Active',totalAmount:100,email:"abc@gmail.com"},
+  {customerID: "5",name: 'Sharu', netRevenue: "220$", status: 'Active',totalAmount:100,email:"abc@gmail.com"},
+  {customerID: "6",name: 'Vaish', netRevenue: "320$", status: 'Active',totalAmount:100,email:"abc@gmail.com"},
+  {customerID: "7",name: 'Keethan', netRevenue: "enadoc", status: 'N',totalAmount:100,email:"abc@gmail.com"},
   {customerID: "8",name: 'Oxygen', netRevenue: "enadoc", status: 'O',totalAmount:100,email:"abc@gmail.com"},
   {customerID: "9",name: 'Fluorine', netRevenue: "enadoc", status: 'F',totalAmount:100,email:"abc@gmail.com"},
   {customerID: "10",name: 'Neon', netRevenue: "enadoc", status: 'Ne',totalAmount:100,email:"abc@gmail.com"},

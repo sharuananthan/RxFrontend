@@ -9,12 +9,12 @@ export interface Subscription {
 
 }
 const SUBSCRIPTION_DATA: Subscription[] = [
-  {subscriptionID: "1", plan: 'Hydrogen', product: "enadoc", status: 'H'},
-  {subscriptionID: "2", plan: 'Helium', product:"enadoc", status: 'He'},
-  {subscriptionID:"3", plan: 'Lithium', product: "enadoc", status: 'Li'},
-  {subscriptionID: "4", plan: 'Beryllium', product:"enadoc", status: 'Be'},
-  {subscriptionID: "5", plan: 'Boron', product: "enadoc", status: 'B'},
-  {subscriptionID: "6", plan: 'Carbon', product: "enadoc", status: 'C'},
+  {subscriptionID: "1", plan: 'Basic', product: "enadoc", status: 'Active'},
+  {subscriptionID: "2", plan: 'Basic', product:"enadoc", status: 'Inactive'},
+  {subscriptionID:"3", plan: 'Premium', product: "enadoc", status: 'Active'},
+  {subscriptionID: "4", plan: 'Basic', product:"enadoc", status: 'Active'},
+  {subscriptionID: "5", plan: 'Basic', product: "enadoc", status: 'Active'},
+  {subscriptionID: "6", plan: 'Basic', product: "enadoc", status: 'Inactive'},
   {subscriptionID: "7", plan: 'Nitrogen', product: "enadoc", status: 'N'},
   {subscriptionID: "8", plan: 'Oxygen', product: "enadoc", status: 'O'},
   {subscriptionID: "9", plan: 'Fluorine', product: "enadoc", status: 'F'},
