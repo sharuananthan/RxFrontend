@@ -1,0 +1,73 @@
+<div>
+  <div class="container1">
+    <div class="containerItem1">Product Plan insights</div>
+    <div class="containerItem2">{{productCount}} Products</div>
+  </div>
+
+  <div class="container2">
+    <table mat-table [dataSource]="data" class="mat-elevation-z8">
+
+
+
+      <ng-container matColumnDef="logo">
+        <th mat-header-cell *matHeaderCellDef> </th>
+        <td mat-cell *matCellDef="let element"> <img [src]="element.logo" class="logo" alt="image" /> </td>
+      </ng-container>
+
+
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef class="header"> Product ID </th>
+        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+      </ng-container>
+
+
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef class="header"> Product Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+      </ng-container>
+
+
+      <ng-container matColumnDef="plans">
+        <th mat-header-cell *matHeaderCellDef class="header"> Plans </th>
+        <td mat-cell *matCellDef="let element"> {{element.plans}} </td>
+      </ng-container>
+
+
+      <ng-container matColumnDef="addons">
+        <th mat-header-cell *matHeaderCellDef class="header"> Addons </th>
+        <td mat-cell *matCellDef="let element"> {{element.addons}} </td>
+      </ng-container>
+
+
+      <ng-container matColumnDef="url">
+        <th mat-header-cell *matHeaderCellDef class="header"> Redirect URL </th>
+        <td mat-cell *matCellDef="let element"> {{element.url}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row (click)="clickedRows.add(row)" [class.demo-row-is-clicked]="clickedRows.has(row)"
+        *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+
+
+
+  <div class="container3">
+
+    <mat-tab-group class="mat-elevation-z8">
+      <div class="label">
+        <mat-tab label="Plans" >
+          <app-product-plan></app-product-plan>
+        </mat-tab>
+      </div>
+
+      <div class="label">
+        <mat-tab label="Add-ons" >
+          <app-product-plan></app-product-plan>
+        </mat-tab>
+      </div>
+    </mat-tab-group>
+
+  </div>
+
+</div>>

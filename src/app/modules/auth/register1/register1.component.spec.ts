@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CurevedLineComponent } from './curved-line.component';
+import { Register1Component } from './register1.component';
 
-describe('CurevedLineComponent', () => {
-  let component: CurevedLineComponent;
-  let fixture: ComponentFixture<CurevedLineComponent>;
+describe('Register1Component', () => {
+  let component: Register1Component;
+  let fixture: ComponentFixture<Register1Component>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CurevedLineComponent ]
+      declarations: [ Register1Component ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CurevedLineComponent);
+    fixture = TestBed.createComponent(Register1Component);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

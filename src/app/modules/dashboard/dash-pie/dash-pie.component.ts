@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 import { ChartType, ChartOptions } from 'chart.js';
 import {
   SingleDataSet,
@@ -20,7 +20,7 @@ export class DashPieComponent implements OnInit {
     },
     elements:{
       arc:{
-        borderWidth:4
+        borderWidth:1
 
       }
     },
