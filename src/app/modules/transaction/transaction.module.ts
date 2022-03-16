@@ -6,11 +6,14 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { TranTableComponent } from './tran-table/tran-table.component';
 import {MatSortModule} from '@angular/material/sort';
 import {MatTableModule} from '@angular/material/table';
+import { DialogComponent } from './dialog/dialog.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
     TransactionComponent,
-    TranTableComponent
+    TranTableComponent,
+    DialogComponent
 
   ],
   imports: [
@@ -18,7 +21,8 @@ import {MatTableModule} from '@angular/material/table';
     TransactionRoutes,
     SharedModule,
     MatSortModule,
-    MatTableModule
+    MatTableModule,
+    MatDialogModule
 
   ],exports: [
 

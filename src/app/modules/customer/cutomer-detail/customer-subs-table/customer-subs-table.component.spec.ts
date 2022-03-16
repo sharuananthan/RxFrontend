@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CurevedLineComponent } from './curved-line.component';
+import { CustomerSubsTableComponent } from './customer-subs-table.component';
 
-describe('CurevedLineComponent', () => {
-  let component: CurevedLineComponent;
-  let fixture: ComponentFixture<CurevedLineComponent>;
+describe('CustomerSubsTableComponent', () => {
+  let component: CustomerSubsTableComponent;
+  let fixture: ComponentFixture<CustomerSubsTableComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CurevedLineComponent ]
+      declarations: [ CustomerSubsTableComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CurevedLineComponent);
+    fixture = TestBed.createComponent(CustomerSubsTableComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
