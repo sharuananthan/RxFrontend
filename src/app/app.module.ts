@@ -34,7 +34,6 @@ import { ChartsModule } from 'ng2-charts';
     ProductModule,
     ChartsModule
 
-
   ],
   providers: [],
   bootstrap: [AppComponent]

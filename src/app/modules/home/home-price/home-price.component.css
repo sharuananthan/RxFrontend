@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+}
+
+.break {
+    height: 0.5rem;
+    background-color: #292C38;
+    box-shadow: #292C381f 0px 2px 4px 0px, #292C3852 0px 2px 16px 0px;
+    border-radius: 0.5rem;
+}
+
+.bg {
+    height: 100vh;
+    padding: 0;
+    padding-top: 2%;
+    background-image: linear-gradient(to top, #ffffff, #fcfcfd, #f9f9fb, #f5f6f9, #f1f3f7, #f1f3f7, #f1f3f7, #f1f3f7, #f5f6f9, #f9f9fb, #fcfcfd, #ffffff);
+}
+
+.priceheadinfo {
+    height: 100vh;
+    padding: 0 10%;
+    padding-top: 2%;
+}
+
+.priceheadinfo h1 {
+    text-align: center;
+    font-size: 2.75rem;
+    color: #292C38;
+}
+
+.priceheadinfo h1 span {
+    color: #347AE2;
+}
+
+.priceheadinfo p {
+    text-align: center;
+    color: #292C38;
+    font-weight: 400;
+}
+  
+section {
+    margin: auto;
+    width: 80%;
+    padding: 0px;
+}
+  
+section .columns {
+    align-items: center;
+}
+  
+.columns {
+    float: left;
+    width: 33.3%;
+    padding: 12px;
+    border-radius: 1rem;
+}
+  
+.price {
+    list-style-type: none;
+    border: 1px solid #ECEFF4;
+    margin: 0;
+    padding: 0;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    border-radius: 1rem;
+    box-shadow: 0 8px 12px 0 #292C3833;
+}
+  
+.price:hover {
+    box-shadow: 0 8px 12px 0 #292C384d;
+}
+  
+.price .header {
+    background-color: #292C38;
+    color: #ECEFF4;
+    font-size: 2.2rem;
+    font-weight: bold;
+    padding: 40px;
+    border-radius: 1rem 1rem 0 0;
+}
+  
+.price li {
+    border-bottom: 1px solid #ECEFF4;
+    text-align: center;
+}
+  
+.price .grey {
+    background-color: #ECEFF4;
+    font-size: 1rem;
+    font-weight:450;
+    padding: 10px;
+}
+
+.price .grey_dollar {
+    background-color: #ECEFF4;
+    font-size: 3rem;
+    padding: 20px;
+    font-weight: bold;
+}
+  
+.price .btn_sign {
+    background-color: #ECEFF4;
+    font-size: 1rem;
+    padding-bottom: 40px;
+    padding-top: 40px;
+    border-radius: 0 0 1rem 1rem;
+}
+  
+.button {
+    background-color: #292C38;
+    border: none;
+    color: #ECEFF4;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.price_pro .price .button {
+    background-color: #347AE2;
+}
+
+.price_pro .price .button:hover {
+    background-color: #292C38;
+}
+  
+.button:hover {
+    background-color: #347AE2;
+    box-shadow: 0 8px 12px 0 #292C3833;
+}
+  
+@media only screen and (max-width: 800px) {
+    .columns {
+      width: 100%;
+    }
+}

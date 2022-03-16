@@ -1,0 +1,41 @@
+.container{ 
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    height: 10vh;
+    background-color: #ECEFF4;
+    box-shadow: #292C3829 0px 3px 6px, #292C383b 0px 3px 6px;
+}
+
+.logo img{
+    height: 80px;
+    margin: 0;
+    padding-left: 3%;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.buttons {
+    padding-right: 3%;    
+}
+
+.buttons .signin {
+    width: 90px;
+    height: 40px;
+    background-color: #347AE2;
+    color: #ECEFF4;
+    font-family: 'Poppins';
+    font-weight:normal;
+}
+
+.buttons .signup {
+    width: 90px;
+    height: 40px;
+    background-color: #292C38;
+    color: #ECEFF4;
+    font-family: 'Poppins';
+    font-weight:normal;
+}
