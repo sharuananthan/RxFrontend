@@ -1,0 +1,25 @@
+.container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: space-between;
+  margin-top: 40px;
+  }
+
+  [class^="box-"] {
+    background-color: var(--navWhite);
+    margin-bottom: 20px;
+    border: none ;
+    padding: 12px;
+    font-size: 14px;
+    color: #3072D8;
+    text-align: start;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    min-width: 400px;
+    width: calc(100% / 3);
+  }
+
+.var{
+    color: black;
+    margin-top: 10px;
+}

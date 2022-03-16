@@ -4,24 +4,39 @@ import { DashboardTitleComponent } from './dashboard-title/dashboard-title.compo
 import { SharedModule } from '../../shared/shared.module';
 import { DashboardComponent } from './dashboard-main/dashboard.component';
 import { DashboardRoutes } from './dashboard-routing.module';
-
+import { DashboardTableComponent } from './dashboard-table/dashboard-table.component';
+import { ChartsModule } from 'ng2-charts';
+import { DashPieComponent } from './dash-pie/dash-pie.component';
+import { GraphComponent } from './graph/graph.component';
+import { DashboardGridboxComponent } from './dashboard-gridbox/dashboard-gridbox.component';
+import {MatTableModule} from '@angular/material/table';
+import {MatTabsModule} from '@angular/material/tabs';
 
 
 @NgModule({
   declarations: [
     DashboardTitleComponent,
-    DashboardComponent
+    DashboardComponent,
+    DashboardTableComponent,
+    DashPieComponent,
+    GraphComponent,
+    DashboardGridboxComponent,
+
+
 
   ],
   imports: [
     CommonModule,
     SharedModule,
     DashboardRoutes,
-
+    ChartsModule,
+  MatTableModule,
+  MatTabsModule
 
   ],exports: [
 
-  ]
+  ],
+  bootstrap: [DashboardTableComponent]
 
 })
 export class DashboardModule { }

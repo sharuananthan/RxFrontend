@@ -12,12 +12,11 @@ import { CustomerModule } from './modules/customer/customer.module';
 import { HelpModule } from './modules/help/help.module';
 import { SubscriptionModule } from './modules/subscription/subscription.module';
 import { ProductModule } from './modules/product/product.module';
+import { ChartsModule } from 'ng2-charts';
+import { ReportsModule } from './modules/reports/reports.module';
 
 @NgModule({
-  declarations: [
-    AppComponent
-
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -30,11 +29,11 @@ import { ProductModule } from './modules/product/product.module';
     CustomerModule,
     HelpModule,
     SubscriptionModule,
-    ProductModule
-
-
+    ProductModule,
+    ChartsModule,
+    ReportsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

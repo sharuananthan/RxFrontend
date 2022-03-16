@@ -10,6 +10,7 @@
   margin: 20px;
 }
 .name-button{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
   background-color:var(--primary-blue);
   border-radius: 25px;
@@ -18,4 +19,7 @@
   height: 40px;
   width: 150px;
 
+}
+.mat-button {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
 }
