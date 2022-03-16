@@ -35,7 +35,8 @@ import {MatTabsModule} from '@angular/material/tabs';
 
   ],exports: [
 
-  ]
+  ],
+  bootstrap: [DashboardTableComponent]
 
 })
 export class DashboardModule { }

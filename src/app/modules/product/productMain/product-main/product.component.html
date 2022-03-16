@@ -1,0 +1,18 @@
+<div class="app-container">
+  <app-side-nav></app-side-nav>
+  <div class="content">
+    <div class="right-align">
+      <app-profile></app-profile>
+    </div>
+    <div class="container">
+      <div class="containerItem1">Products</div>
+      <div class="container1">
+      <div class="containerItem2"><p>Each product can have multiple plans and you can create onetime or recurring plans to sell your items.</p></div>
+      <div class="containerItem3"><a [routerLink]="['/product/addProduct']"> <button mat-button class="name-button" >+ Add Product</button> </a></div>
+    </div>
+    </div>
+    <div>
+      <app-product-table></app-product-table>
+    </div>
+  </div>
+</div>
