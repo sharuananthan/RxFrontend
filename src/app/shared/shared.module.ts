@@ -9,6 +9,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { RouterModule } from '@angular/router';
 import { ProfileComponent } from './components/profile/profile.component';
 import { TopBarComponent } from './components/top-bar/top-bar.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 
 
@@ -17,6 +18,7 @@ import { TopBarComponent } from './components/top-bar/top-bar.component';
     SideNavComponent,
     ProfileComponent,
     TopBarComponent,
+    NotFoundComponent,
   ],
   imports: [
     CommonModule,
