@@ -9,10 +9,7 @@ const routes: Routes = [
     loadChildren: () =>
       import('./modules/home/home.module').then((m) => m.HomeModule)
   },
-  { path: '404', component: NotFoundComponent },
-  {
-    path:'**',redirectTo:'404'
-  },
+
   {
     path: 'auth',
     loadChildren: () =>
@@ -72,6 +69,10 @@ const routes: Routes = [
     path: 'top',
     component: TopBarComponent,
   },
+  { path: '404', component: NotFoundComponent },
+  {
+    path:'**',redirectTo:'404'
+  }
 ];
 
 @NgModule({
