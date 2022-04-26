@@ -1,0 +1,142 @@
+html {
+    scroll-behavior: smooth;
+}
+
+#home {
+    /* min-height: 90vh; */
+    height: 90vh;
+    padding:0 10%;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../../../../assets/home-img/home-bg-1.png);
+    background-size: cover;
+    background-position: bottom;
+}
+
+.home .content {
+    margin-left: 0px;
+    /* padding-left: 10%; */
+}
+
+.home .content h3 {
+    font-size: 2.5rem;
+    color: #292C38;
+    text-transform: uppercase;
+}
+
+.home .content h3 span {
+    color: #347AE2;
+    text-transform: uppercase;
+}
+
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding:.8rem 3rem;
+    border-radius: 5rem;
+    background: #347AE2;
+    font-size: 1rem;
+    color: #ECEFF4;
+    cursor: pointer;
+    box-shadow: 0 .5rem 1rem #292c387a;
+    transition: all .2s ease-in-out;
+    text-decoration: none;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+.home .image img {
+    height: 500px;
+    padding-left: 3%;
+    /* padding-right: 10vw; */
+    /* margin-right: 200px; */
+    animation: float 3s ease-in-out infinite;
+}
+
+#features_ft {
+    height: 50vh;
+    padding:0 10%;
+    padding-top: 2%;
+    background-color: #292C38;
+    /* background-image: linear-gradient(to right top, #292c38, #333541, #3d3f4a, #474953, #51535d, #51535d, #51535d, #51535d, #474953, #3d3f4a, #333541, #292c38); */
+}
+
+#features_ft h1 {
+    font-size: 3rem;
+    padding-left: 10%;
+    color: #ECEFF4;
+}
+
+#features_ft ul {
+    font-size: 1.1rem;
+    padding-left: 20%;
+    /* list-style-type:square; */
+    line-height: 200% ;
+    color: #ECEFF4;
+}
+
+@keyframes float {
+    0%, 100%{
+        transform: translateX(1rem);
+    }
+    50%{
+        transform: translateY(-1rem);
+    }
+}
+
+/* media queries  */
+
+@media (max-width:991px){
+    
+    section{
+        padding:0 3%;
+        padding-top: 7.5rem;
+        padding-bottom: 2rem;
+    }
+
+}
+
+@media (max-width:768px){
+
+    .home{
+        flex-flow: column-reverse;
+    }
+
+    .home .image img{
+        width:100%;
+        background-size: cover;
+    }
+
+    .home .content h3{
+        font-size: 3.6rem;
+    }
+
+    .home .content p{
+        font-size: 1.5rem;
+    }
+
+}
+
+@media (max-width:450px){
+    
+    html{
+        font-size: 50%;
+    }
+
+    .about .column .content .buttons a{
+        width:100%;
+        text-align: center;
+    }
+
+    .about .column .content .buttons a:last-child{
+        margin: 1rem 0;
+    }
+
+}

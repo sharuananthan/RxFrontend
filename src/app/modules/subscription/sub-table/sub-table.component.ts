@@ -7,17 +7,17 @@ import { DialogComponent } from '../dialog/dialog.component';
 
 export interface PeriodicElement {
   name: string;
-  position: number;
-  weight: number;
+  position: string;
+  weight: string;
   symbol: string;
-  revenue: number;
+  revenue: string;
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
-  {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H',revenue:5500},
-  {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He',revenue:5500},
-  {position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li',revenue:5500},
-  {position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be',revenue:5500}
+  {position: "2/2/2022", name: 'apple123@gmail.com', weight: "Enadoc", symbol: '5/5/2022',revenue:"5500$"},
+  {position: "5/2/2021", name: 'orange@yahoo.com', weight: "Flowdoh", symbol: '5/5/2022',revenue:"5500$"},
+  {position: "4/3/2022", name: 'carrot@outlook.com', weight: "Enadoc", symbol: '5/5/2022',revenue:"5500$"},
+  {position: "4/5/2022", name: 'aspen@live.com', weight: "Flowdoh", symbol: '5/5/2022',revenue:"5500$"}
 ];
 
 @Component({
