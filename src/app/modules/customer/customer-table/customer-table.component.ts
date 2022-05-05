@@ -1,53 +1,43 @@
-import { AfterViewInit, Component, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ViewChild,OnInit } from '@angular/core';
 import {MatPaginator} from '@angular/material/paginator'
 import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
-export interface Customer {
-  customerID: string;
-  name: string;
-  email: string;
-  netRevenue: string;
-  totalAmount:number,
-  status: string;
+import { Observable } from 'rxjs';
+import { Customer } from 'src/app/data/schema/customer';
+import { CustomerService } from 'src/app/data/service/Customer/customer.service';
 
-}
-const CUSTOMER_DATA: Customer[] = [
-  {customerID: "1",name: 'Sulegjan', netRevenue: "100$", status: 'Active',totalAmount:100,email:"abc@gmail.com"},
-  {customerID: "2",name: 'Ajeevitha', netRevenue:"200$", status: 'Active',totalAmount:100,email:"abc@gmail.com"},
-  {customerID:"3",name: 'Akshayan', netRevenue: "150$", status: 'Active',totalAmount:100,email:"abc@gmail.com"},
-  {customerID: "4",name: 'Dasikaran', netRevenue:"170$", status: 'Active',totalAmount:100,email:"abc@gmail.com"},
-  {customerID: "5",name: 'Sharu', netRevenue: "220$", status: 'Active',totalAmount:100,email:"abc@gmail.com"},
-  {customerID: "6",name: 'Vaish', netRevenue: "320$", status: 'Active',totalAmount:100,email:"abc@gmail.com"},
-  {customerID: "7",name: 'Keethan', netRevenue: "enadoc", status: 'N',totalAmount:100,email:"abc@gmail.com"},
-  {customerID: "8",name: 'Oxygen', netRevenue: "enadoc", status: 'O',totalAmount:100,email:"abc@gmail.com"},
-  {customerID: "9",name: 'Fluorine', netRevenue: "enadoc", status: 'F',totalAmount:100,email:"abc@gmail.com"},
-  {customerID: "10",name: 'Neon', netRevenue: "enadoc", status: 'Ne',totalAmount:100,email:"abc@gmail.com"},
-  {customerID:"11",name: 'Sodium', netRevenue: "enadoc", status: 'Na',totalAmount:100,email:"abc@gmail.com"},
-  {customerID: "12",name: 'Magnesium', netRevenue:"enadoc", status: 'Mg',totalAmount:100,email:"abc@gmail.com"},
-  {customerID: "13",name: 'Aluminum', netRevenue: "enadoc", status: 'Al',totalAmount:100,email:"abc@gmail.com"},
-  {customerID: "14",name: 'Silicon', netRevenue: "enadoc", status: 'Si',totalAmount:100,email:"abc@gmail.com"},
-  {customerID: "15",name: 'Phosphorus', netRevenue: "enadoc", status: 'P',totalAmount:100,email:"abc@gmail.com"},
-
-];
 @Component({
   selector: 'app-customer-table',
   templateUrl: './customer-table.component.html',
-  styleUrls: ['./customer-table.component.css']
+  styleUrls: ['./customer-table.component.css'],
+  providers:[CustomerService]
 })
-export class CustomerTableComponent implements AfterViewInit {
+export class CustomerTableComponent implements AfterViewInit,OnInit {
   searchKey!: string;
-  displayedColumns: string[] = ['customerID', 'name','email', 'netRevenue','totalAmount','status'];
-  dataSource = new MatTableDataSource<Customer>(CUSTOMER_DATA);
+  hello!:string;
+  customers: Customer [] = [];
+  displayedColumns: string[] = ['customerId', 'name','email','status'];
+  dataSource =new MatTableDataSource<Customer>();
   @ViewChild(MatPaginator) paginator!: MatPaginator;
-  constructor(private _router:Router) { }
+  constructor(private _router:Router,private _customerService:CustomerService) { }
 
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
   }
+  ngOnInit(){
+  this.getCustomers();
+  }
+
+
 navigate(row:Customer){
-  this._router.navigate(['/customer/details',row.customerID]);
+  this._router.navigate(['/customer/details',row.customerId]);
 }
+getCustomers(){
 
+  this._customerService.getCustomers().subscribe(
+    (data:Customer[])=>{
+      this.customers=data;
+      this.dataSource.data=this.customers})
 
-
+}
 }
