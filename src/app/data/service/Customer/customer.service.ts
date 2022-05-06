@@ -6,27 +6,14 @@ import { Customer } from '../../schema/customer';
   providedIn: 'root'
 })
 export class CustomerService {
-  readonly baseApiUrl = 'https://localhost:44352/api/customer';
-  // customers : Customer[]=[
-  //   {
-  //     customerId:"appel",
-  //     name:"sdfg",
-  //     email:"sdfg",
-  //     status:"sdfg"
-  //   },
-  //   {
-  //     customerId:"sdfgd",
-  //     name:"sdfg",
-  //     email:"sdfg",
-  //     status:"sdfg"
-  //   }
-  // ];
-  //  x:Observable<Customer[]> = of(this.customers);
+  readonly customerBaseApiUrl = 'https://localhost:44352/api/customer';
+
   constructor(private httpClient: HttpClient) { }
 
   getCustomers():Observable<Customer[]> {
-    return this.httpClient.get<Customer []>(this.baseApiUrl)
+    return this.httpClient.get<Customer []>(this.customerBaseApiUrl)
   }
+
 
 
 
@@ -44,5 +31,7 @@ export class CustomerService {
       // Let the app keep running by returning an empty result.
       return of(result as T);
     };
+
+
 }
 }

@@ -10,11 +10,10 @@ import { CustomerService } from 'src/app/data/service/Customer/customer.service'
   selector: 'app-customer-table',
   templateUrl: './customer-table.component.html',
   styleUrls: ['./customer-table.component.css'],
-  providers:[CustomerService]
+  // providers:[CustomerService]
 })
 export class CustomerTableComponent implements AfterViewInit,OnInit {
   searchKey!: string;
-  hello!:string;
   customers: Customer [] = [];
   displayedColumns: string[] = ['customerId', 'name','email','status'];
   dataSource =new MatTableDataSource<Customer>();
