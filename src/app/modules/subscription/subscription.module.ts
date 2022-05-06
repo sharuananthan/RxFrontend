@@ -5,10 +5,11 @@ import { SubscriptionRoutes } from './subscription-routing.module';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { SubGridComponent } from './sub-grid/sub-grid.component';
 import { SubTableComponent } from './sub-table/sub-table.component';
-import {MatSortModule} from '@angular/material/sort';
 import {MatTableModule} from '@angular/material/table';
 import {MatDialogModule} from '@angular/material/dialog';
 import { DialogComponent } from './dialog/dialog.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -22,8 +23,10 @@ import { DialogComponent } from './dialog/dialog.component';
     CommonModule,
     SubscriptionRoutes,
     SharedModule,
-    MatSortModule,
-    MatTableModule,MatDialogModule
+    MatTableModule,
+    MatDialogModule,
+    MatPaginatorModule,
+    FormsModule
 
   ],exports: [
 

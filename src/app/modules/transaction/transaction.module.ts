@@ -8,6 +8,8 @@ import {MatSortModule} from '@angular/material/sort';
 import {MatTableModule} from '@angular/material/table';
 import { DialogComponent } from './dialog/dialog.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import { FormsModule } from '@angular/forms';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
@@ -20,9 +22,10 @@ import {MatDialogModule} from '@angular/material/dialog';
     CommonModule,
     TransactionRoutes,
     SharedModule,
-    MatSortModule,
     MatTableModule,
-    MatDialogModule
+    MatDialogModule,
+    FormsModule,
+    MatPaginatorModule
 
   ],exports: [
 

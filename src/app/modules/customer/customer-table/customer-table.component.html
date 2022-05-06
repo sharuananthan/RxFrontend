@@ -1,11 +1,11 @@
-  <div class="form-group">
-    <input
-      type="text"
-      placeholder="Search"
-      class="form-control"
-      [(ngModel)]="searchKey"
-    />
-  </div>
+<div class="form-group">
+  <input
+    type="text"
+    placeholder="Search"
+    class="form-control"
+    [(ngModel)]="searchKey"
+  />
+</div>
 <table mat-table [dataSource]="dataSource">
   <ng-container matColumnDef="customerId">
     <th mat-header-cell *matHeaderCellDef>Customer ID</th>
@@ -52,4 +52,3 @@
 >
 </mat-paginator>
 
-<div *ngFor="let cust of customers">{{cust.customerId}}</div>
