@@ -8,7 +8,7 @@ const routes: Routes = [
     component: SubscriptionComponent
   },
   {
-    path:'details',
+    path:'details/:id',
     component:SubcsriptionDetailsComponent
   }
 ];
