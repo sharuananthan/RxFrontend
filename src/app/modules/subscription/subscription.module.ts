@@ -10,6 +10,9 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { DialogComponent } from './dialog/dialog.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { FormsModule } from '@angular/forms';
+import { SubcsriptionDetailsComponent } from './subcsription-details/subcsription-details.component';
+import { AddOnTableComponent } from './subcsription-details/add-on-table/add-on-table.component';
+import { MatDivider, MatDividerModule } from '@angular/material/divider';
 
 
 @NgModule({
@@ -17,7 +20,9 @@ import { FormsModule } from '@angular/forms';
     SubscriptionComponent,
     SubGridComponent,
     SubTableComponent,
-    DialogComponent
+    DialogComponent,
+    SubcsriptionDetailsComponent,
+    AddOnTableComponent
   ],
   imports: [
     CommonModule,
@@ -26,7 +31,8 @@ import { FormsModule } from '@angular/forms';
     MatTableModule,
     MatDialogModule,
     MatPaginatorModule,
-    FormsModule
+    FormsModule,
+    MatDividerModule
 
   ],exports: [
 
