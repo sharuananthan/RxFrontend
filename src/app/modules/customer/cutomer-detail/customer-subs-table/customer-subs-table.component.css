@@ -11,3 +11,6 @@ th {
   font-size: 14px;
   color: var(--primary-blue);
 }
+.mat-row{
+  cursor: pointer;
+}

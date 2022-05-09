@@ -26,3 +26,6 @@ th {
 }
 
 .form-group input:focus {outline:none!important;}
+.mat-row{
+  cursor: pointer;
+}
