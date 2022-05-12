@@ -40,7 +40,7 @@ export class SideNavComponent implements AfterViewInit {
   isProduct() {
     return this.router.url == '/product';
   }
-  isTransaction() {
+  isBill() {
     return this.router.url == '/transaction';
   }
   isreports() {

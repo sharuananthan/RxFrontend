@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TranTableComponent } from './tran-table.component';
+import { AddOnTableComponent } from './add-on-table.component';
 
-describe('TranTableComponent', () => {
-  let component: TranTableComponent;
-  let fixture: ComponentFixture<TranTableComponent>;
+describe('AddOnTableComponent', () => {
+  let component: AddOnTableComponent;
+  let fixture: ComponentFixture<AddOnTableComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TranTableComponent ]
+      declarations: [ AddOnTableComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TranTableComponent);
+    fixture = TestBed.createComponent(AddOnTableComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

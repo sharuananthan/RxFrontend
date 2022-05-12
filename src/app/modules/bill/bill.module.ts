@@ -1,28 +1,30 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TransactionComponent } from './transaction-main/transaction.component';
-import { TransactionRoutes } from './transaction-routing.module';
+import { BillComponent } from './bill-main/bill.component';
+import { BillRoutes } from './bill-routing.module';
 import { SharedModule } from 'src/app/shared/shared.module';
-import { TranTableComponent } from './tran-table/tran-table.component';
-import {MatSortModule} from '@angular/material/sort';
+import { BillTableComponent } from './bill-table/bill-table.component';
 import {MatTableModule} from '@angular/material/table';
 import { DialogComponent } from './dialog/dialog.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import { FormsModule } from '@angular/forms';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
-    TransactionComponent,
-    TranTableComponent,
+    BillComponent,
+    BillTableComponent,
     DialogComponent
 
   ],
   imports: [
     CommonModule,
-    TransactionRoutes,
+    BillRoutes,
     SharedModule,
-    MatSortModule,
     MatTableModule,
-    MatDialogModule
+    MatDialogModule,
+    FormsModule,
+    MatPaginatorModule
 
   ],exports: [
 

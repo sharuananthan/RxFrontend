@@ -9,10 +9,11 @@ export class CustomerDetailsComponent implements OnInit {
   customerID!:string;
 
   constructor(private _activatedRoute: ActivatedRoute) {
-    this.customerID = _activatedRoute.snapshot.paramMap.get('id')||'';
+
   }
 
   ngOnInit(): void {
+    this.customerID = this._activatedRoute.snapshot.paramMap.get('id')||'';
   }
 
 }

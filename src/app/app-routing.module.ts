@@ -17,9 +17,9 @@ const routes: Routes = [
       import('./modules/auth/auth.module').then((m) => m.AuthModule),
   },
   {
-    path: 'transaction',
+    path: 'bill',
     loadChildren: () =>
-      import('./modules/transaction/transaction.module').then(
+      import('./modules/bill/bill.module').then(
         (m) => m.TransactionModule
       ),
   },
