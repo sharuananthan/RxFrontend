@@ -6,11 +6,11 @@ import { DialogComponent } from '../dialog/dialog.component';
 
 @Component({
   selector: 'app-tran-table',
-  templateUrl: './tran-table.component.html',
-  styleUrls: ['./tran-table.component.css']
+  templateUrl: './bill-table.component.html',
+  styleUrls: ['./bill-table.component.css']
 })
 
-export class TranTableComponent implements AfterViewInit {
+export class BillTableComponent implements AfterViewInit {
   searchKey! : string;
   displayedColumns: string[] = ['customerId', 'name','email','status'];
   dataSource = new MatTableDataSource();
