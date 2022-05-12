@@ -10,11 +10,11 @@
             
                 
 <div class="container2">
-    <form [formGroup]="userForm">
+    <form   #userForm="ngForm" >
 
         <div class="form-group">
             <label class="labelName">Product Name</label>
-            <input type="text" class="form-control" formControlName="name" />
+            <input type="text" class="form-control" name="name"   />
             <div class="invalid" *ngIf="f['name'].touched && f['name'].invalid">
                 <div *ngIf="f['name'].errors && f['name'].errors['required']">Product name is required. </div>
             </div>
@@ -22,7 +22,7 @@
 
         <div class="form-group">
             <label class="labelName">Description </label>
-            <input type="textarea"  class="form-control-des" formControlName="description" />
+            <input type="textarea"  class="form-control-des" name="description" />
             <div class="invalid" *ngIf="f['description'].touched && f['description'].invalid">
                 <div *ngIf="f['description'].errors && f['description'].errors['required']">Description is required. </div>
             </div>
@@ -41,7 +41,7 @@
 
         <div class="form-group">
             <label class="labelName">Webhook URL</label>
-            <input type="text" class="form-control" formControlName="webUrl" />
+            <input type="text" class="form-control"  name="webUrl" />
             <div class="invalid" *ngIf="f['webUrl'].touched && f['webUrl'].invalid">
                 <div *ngIf="f['webUrl'].errors && f['webUrl'].errors['required']">URL is required. </div>
             </div>
@@ -49,7 +49,7 @@
 
         <div class="form-group">
             <label class="labelName">Redirect URL</label>
-            <input type="text" class="form-control" formControlName="redirectUrl" />
+            <input type="text" class="form-control" name="redirectUrl"  />
             <div class="invalid" *ngIf="f['redirectUrl'].touched && f['redirectUrl'].invalid">
                 <div *ngIf="f['redirectUrl'].errors && f['redirectUrl'].errors['required']">URL is required. </div>
             </div>
@@ -57,7 +57,7 @@
 
         <div class="form-group">
             <label class="labelName">Secret Key</label>
-            <input type="text" class="form-control" formControlName="key" />
+            <input type="text" class="form-control" name="key" />
             <div class="invalid" *ngIf="f['key'].touched && f['key'].invalid">
                 <div *ngIf="f['key'].errors && f['key'].errors['required']">Secret Key is required. </div>
             </div>
@@ -65,18 +65,25 @@
 
         <div class="form-group">
             <label class="labelName">Trial Period</label>
-            <input type="text" class="form-control" formControlName="period" />
+            <input type="text" class="form-control" name="period" />
             <div class="invalid" *ngIf="f['period'].touched && f['period'].invalid">
                 <div *ngIf="f['period'].errors && f['period'].errors['required']">Trial Period is required.</div>
             </div>
         </div>
 
         <div class="form-group">
-            <button class="btn" type="submit">Save</button>
+            <button class="btn" type="submit" [disabled]="!userForm.valid">Save</button>
             <button class="btn2" routerLink="/product">Cancel</button>
            
           </div>
 
+          <div class="form-group">
+            <label class="labelName">Addons</label>
+            <input type="text" class="form-control" name="period" />
+            <div class="invalid" *ngIf="f['period'].touched && f['period'].invalid">
+                <div *ngIf="f['period'].errors && f['period'].errors['required']">Trial Period is required.</div>
+            </div>
+        </div>
     </form>
 </div>
 

@@ -32,6 +32,7 @@ import { FooterComponent } from './components/footer/footer/footer.component';
     RouterModule
 
   ],
+ // providers:[SharedService],
   exports: [SideNavComponent, ProfileComponent, FooterComponent],
 })
 export class SharedModule { }

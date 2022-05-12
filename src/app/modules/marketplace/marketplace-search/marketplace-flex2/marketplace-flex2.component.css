@@ -1,0 +1,6 @@
+.box{
+    width: 900px;
+    height: 550px;
+    background-color: var(--navWhite);
+    border-radius: 10px;
+}

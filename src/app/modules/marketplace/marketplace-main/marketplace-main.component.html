@@ -7,10 +7,21 @@
     </div>
 
     <div class="search">
+        <div class="form-control">
+          
+              
+              <input class="form-control"  type="text"  placeholder="Start searching products"  matInput [formControl]="myControl" [matAutocomplete]="auto">
+              <mat-autocomplete #auto="matAutocomplete">
+                     <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                  {{option}}
+                </mat-option>
+              </mat-autocomplete>
+           
+        </div>
 
-        <input class="form-control" type="text" name="search"
-            placeholder="Start searching products">
-        <button mat-button class="button" type="submit"><img src="../../../assets/icons/search.png" /></button>
+        <!-- <input class="form-control" type="text" name="search"
+            placeholder="Start searching products"> -->
+            <a [routerLink]="['/marketplace/search']"><button mat-button class="button" type="submit"><img src="../../../assets/icons/search.png" /></button></a>
 
     </div>
 </div>
