@@ -1,10 +1,10 @@
 export interface Product{
-    LogoURL:string,
-    ProductId: string,
-    Name:string,
-    PlanCount: number,
-    AddOnCount: number,
-    RedirectUrl:string,
+    logoURL:string;
+    productId: string;
+    name:string;
+    planCount: number;
+    addOnCount: number;
+    redirectUrl:string;
     
    
 }

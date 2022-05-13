@@ -9,39 +9,39 @@
 
 
 
-      <ng-container  matColumnDef="LogoURL">
+      <ng-container  matColumnDef="logoURL">
         <th mat-header-cell *matHeaderCellDef>Logo </th>
-        <td mat-cell *matCellDef="let Product ">{{Product.LogoURL}}</td>
+        <td mat-cell *matCellDef="let Product ">{{Product.logoURL}}</td>
       </ng-container>
 
 
-      <ng-container  matColumnDef="ProductId">
+      <ng-container  matColumnDef="productId">
         <th mat-header-cell *matHeaderCellDef class="header"> Product ID </th>
-        <td mat-cell *matCellDef="let Product "> {{Product.ProductId}} </td>
+        <td mat-cell *matCellDef="let Product "> {{Product.productId}} </td>
       </ng-container>
 
 
-      <ng-container  matColumnDef="Name">
+      <ng-container  matColumnDef="name">
         <th mat-header-cell *matHeaderCellDef class="header"> Product Name </th>
-        <td mat-cell *matCellDef="let Product "> {{Product.Name}} </td>
+        <td mat-cell *matCellDef="let Product "> {{Product.name}} </td>
       </ng-container>
 
 
-      <ng-container  matColumnDef="PlanCount">
+      <ng-container  matColumnDef="planCount">
         <th mat-header-cell *matHeaderCellDef class="header"> Plans </th>
-        <td mat-cell *matCellDef="let Product "> {{Product.PlanCount}} </td>
+        <td mat-cell *matCellDef="let Product "> {{Product.planCount}} </td>
       </ng-container>
 
 
-      <ng-container  matColumnDef="AddOnCount">
+      <ng-container  matColumnDef="addOnCount">
         <th mat-header-cell *matHeaderCellDef class="header"> Addons </th>
-        <td mat-cell *matCellDef="let Product "> {{Product.AddOnCount}} </td>
+        <td mat-cell *matCellDef="let Product "> {{Product.addOnCount}} </td>
       </ng-container>
 
 
-      <ng-container  matColumnDef="RedirectUrl">
+      <ng-container  matColumnDef="redirectUrl">
         <th mat-header-cell *matHeaderCellDef class="header"> Redirect URL </th>
-        <td mat-cell *matCellDef="let Product "> {{Product.RedirectUrl}} </td>
+        <td mat-cell *matCellDef="let Product "> {{Product.redirectUrl==null?'edf':Product.redirectUrl}} </td>
       </ng-container>
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
@@ -53,7 +53,7 @@
 
   <div class="container3">
 
-    <mat-tab-group class="mat-elevation-z8">
+     <mat-tab-group class="mat-elevation-z8">
       <div class="label">
         <mat-tab label="Plans" >
           <app-product-plan></app-product-plan>
@@ -65,7 +65,7 @@
           <app-product-plan></app-product-plan>
         </mat-tab>
       </div>
-    </mat-tab-group>
+    </mat-tab-group> 
 
   </div>
 

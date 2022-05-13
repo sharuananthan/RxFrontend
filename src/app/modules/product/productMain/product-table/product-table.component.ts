@@ -11,7 +11,7 @@ import { MatTableDataSource } from '@angular/material/table';
 export class ProductTableComponent implements OnInit {
 
   products: Product[] = [];
-  displayedColumns: String[] = ['LogoURL', 'ProductId', 'Name', 'PlanCount', 'AddOnCount', 'RedirectUrl']
+  displayedColumns: String[] = ['logoURL', 'productId', 'name', 'planCount', 'addOnCount', 'redirectUrl']
 
   productCount: string = '3';
   dataSource = new MatTableDataSource<Product>();
@@ -29,6 +29,7 @@ export class ProductTableComponent implements OnInit {
     this.productservice.getProducts().subscribe((data: Product[]) => {
       this.products = data;
       this.dataSource.data = this.products
+      console.log(this.dataSource)
 
     });
   }
