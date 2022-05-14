@@ -49,33 +49,9 @@ padding-left: 10px;
     border-radius: 0 10px 10px 0;
 }
 
-.second-content {
-    background-color: #292C38;
-    height: 200px;
-    color: var(--navWhite);
+.flexbox{
     display: flex;
-    justify-content: space-around;
-
+    justify-content: space-evenly;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
-
-.text-content {
-    font-size: 22px;
-    color: var(--navWhite);
-    margin: auto;
-}
-
-.button-content {
-    background-color: var(--navWhite);
-    color: #292C38;
-    width: 200px;
-    height: 40px;
-    font-size: 14px;
-    border-radius: 15px;
-    border: none;
-    margin: auto;
-}
-
-.mat-button {
-    font-family: "Poppins", Arial, Helvetica, sans-serif;
-  }
-  

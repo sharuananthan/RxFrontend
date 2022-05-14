@@ -5,48 +5,47 @@
   </div>
 
   <div class="container2">
-    <table mat-table [dataSource]="data" class="mat-elevation-z8">
+    <table mat-table [dataSource] = "dataSource"  class="mat-elevation-z8">
 
 
 
-      <ng-container matColumnDef="logo">
-        <th mat-header-cell *matHeaderCellDef> </th>
-        <td mat-cell *matCellDef="let element"> <img [src]="element.logo" class="logo" alt="image" /> </td>
+      <ng-container  matColumnDef="logoURL">
+        <th mat-header-cell *matHeaderCellDef>Logo </th>
+        <td mat-cell *matCellDef="let Product ">{{Product.logoURL}}</td>
       </ng-container>
 
 
-      <ng-container matColumnDef="id">
+      <ng-container  matColumnDef="productId">
         <th mat-header-cell *matHeaderCellDef class="header"> Product ID </th>
-        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+        <td mat-cell *matCellDef="let Product "> {{Product.productId}} </td>
       </ng-container>
 
 
-      <ng-container matColumnDef="name">
+      <ng-container  matColumnDef="name">
         <th mat-header-cell *matHeaderCellDef class="header"> Product Name </th>
-        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        <td mat-cell *matCellDef="let Product "> {{Product.name}} </td>
       </ng-container>
 
 
-      <ng-container matColumnDef="plans">
+      <ng-container  matColumnDef="planCount">
         <th mat-header-cell *matHeaderCellDef class="header"> Plans </th>
-        <td mat-cell *matCellDef="let element"> {{element.plans}} </td>
+        <td mat-cell *matCellDef="let Product "> {{Product.planCount}} </td>
       </ng-container>
 
 
-      <ng-container matColumnDef="addons">
+      <ng-container  matColumnDef="addOnCount">
         <th mat-header-cell *matHeaderCellDef class="header"> Addons </th>
-        <td mat-cell *matCellDef="let element"> {{element.addons}} </td>
+        <td mat-cell *matCellDef="let Product "> {{Product.addOnCount}} </td>
       </ng-container>
 
 
-      <ng-container matColumnDef="url">
+      <ng-container  matColumnDef="redirectUrl">
         <th mat-header-cell *matHeaderCellDef class="header"> Redirect URL </th>
-        <td mat-cell *matCellDef="let element"> {{element.url}} </td>
+        <td mat-cell *matCellDef="let Product "> {{Product.redirectUrl}} </td>
       </ng-container>
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <tr mat-row (click)="clickedRows.add(row)" [class.demo-row-is-clicked]="clickedRows.has(row)"
-        *matRowDef="let row; columns: displayedColumns;"></tr>
+      <tr mat-row (click)="(row)" *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
   </div>
 
@@ -54,7 +53,7 @@
 
   <div class="container3">
 
-    <mat-tab-group class="mat-elevation-z8">
+     <mat-tab-group class="mat-elevation-z8">
       <div class="label">
         <mat-tab label="Plans" >
           <app-product-plan></app-product-plan>
@@ -66,7 +65,7 @@
           <app-product-plan></app-product-plan>
         </mat-tab>
       </div>
-    </mat-tab-group>
+    </mat-tab-group> 
 
   </div>
 

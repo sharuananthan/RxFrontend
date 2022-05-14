@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { NotFoundComponent } from './shared/components/not-found/not-found.component';
 import { TopBarComponent } from './shared/components/top-bar/top-bar.component';
 
+
 const routes: Routes = [
   {
     path: '',
@@ -72,7 +73,8 @@ const routes: Routes = [
   { path: '404', component: NotFoundComponent },
   {
     path:'**',redirectTo:'404'
-  }
+  },
+  
 ];
 
 @NgModule({
