@@ -8,7 +8,7 @@ import { ProductPlanComponent } from './productMain/product-plan/product-plan.co
 import {MatTableModule} from '@angular/material/table';
 import { MatTabsModule } from '@angular/material/tabs';
 import { AddProductComponent } from './addProduct/add-product.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AddPlanComponent } from './addPlan/add-plan.component';
 
 
@@ -20,6 +20,7 @@ import { AddPlanComponent } from './addPlan/add-plan.component';
     ProductPlanComponent,
     AddProductComponent,
     AddPlanComponent,
+   
     
   ],
   imports: [
@@ -28,7 +29,10 @@ import { AddPlanComponent } from './addPlan/add-plan.component';
     ProductRoutes,
     MatTableModule,
     MatTabsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule,
+    
+    
   ],exports: [
 
   ]

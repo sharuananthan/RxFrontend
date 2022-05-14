@@ -16,6 +16,8 @@ import { ChartsModule } from 'ng2-charts';
 import { ReportsModule } from './modules/reports/reports.module';
 import { MarketplaceModule } from './modules/marketplace/marketplace.module';
 
+
+
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -34,6 +36,8 @@ import { MarketplaceModule } from './modules/marketplace/marketplace.module';
     ChartsModule,
     ReportsModule,
     MarketplaceModule,
+   
+    
   ],
   providers: [],
   bootstrap: [AppComponent],

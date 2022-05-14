@@ -10,6 +10,7 @@ import { RouterModule } from '@angular/router';
 import { ProfileComponent } from './components/profile/profile.component';
 import { TopBarComponent } from './components/top-bar/top-bar.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { FooterComponent } from './components/footer/footer/footer.component';
 
 
 
@@ -19,6 +20,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     ProfileComponent,
     TopBarComponent,
     NotFoundComponent,
+    FooterComponent,
   ],
   imports: [
     CommonModule,
@@ -30,6 +32,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     RouterModule
 
   ],
-  exports: [SideNavComponent, ProfileComponent],
+ // providers:[SharedService],
+  exports: [SideNavComponent, ProfileComponent, FooterComponent],
 })
 export class SharedModule { }
