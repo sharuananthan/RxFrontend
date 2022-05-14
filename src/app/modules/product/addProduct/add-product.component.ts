@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup,Validators ,NgForm} from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, NgForm } from '@angular/forms';
+import { AddProduct } from 'src/app/data/schema/addProduct.model';
 //import { SharedService } from 'src/app/shared/shared.service';
-import { ProductTableComponent } from '../productMain/product-table/product-table.component';
 
 @Component({
   selector: 'app-add-product',
@@ -12,29 +12,46 @@ import { ProductTableComponent } from '../productMain/product-table/product-tabl
 export class AddProductComponent implements OnInit {
 
   userForm!: FormGroup;
-  // refreshProductList: any;
-  constructor(private fb: FormBuilder, ) { }
 
-  ProductList:any=[];
+  product: AddProduct = {
+    name: '',
+    description : '',
+    logo:'',
+    webUrl:'',
+    redirectUrl:'',
+    key:'',
+    period:'',
+    addons:''
+  }
+
+
+  // refreshProductList: any;
+  constructor(private fb: FormBuilder) { }
+
+  ProductList: any = [];
 
   ngOnInit(): void {
     this.userForm = this.fb.group({
-      name: ['', Validators.required ],
-      description:['', Validators.required ],
-      logo:['', Validators.required ],
-      webUrl:['', Validators.required ],
-      redirectUrl:['', Validators.required ],
-      key:['', Validators.required ],
-      period:['', Validators.required ],
-      
+      name: ['', Validators.required],
+      description: ['', Validators.required],
+      logo: ['', Validators.required],
+      webUrl: ['', Validators.required],
+      redirectUrl: ['', Validators.required],
+      key: ['', Validators.required],
+      period: ['', Validators.required],
+      addons: ['', Validators.required]
 
     })
 
-    
-  // this.refreshProductList();
-    
+
+    // this.refreshProductList();
+
   }
-  
+
+  onSubmit() {
+console.log(this.product);
+  }
+
 
   // resetForm(userForm?: NgForm) {
   //   if (userForm)
@@ -51,16 +68,16 @@ export class AddProductComponent implements OnInit {
   // onSubmit(userform: NgForm) {
   //   if (userform.value.name == "") {
   //     this.service.addProduct(userform.value).subscribe((res) => {
-        
+
   //       this.refreshProductList();
 
   //     });
   //   }
   //   else { 
   //     this.service.addProduct(userform.value).subscribe((res) => {
-       
+
   //       this.refreshProductList();
-  
+
   //     });
   //   }
   // }
