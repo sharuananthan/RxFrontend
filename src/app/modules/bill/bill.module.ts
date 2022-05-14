@@ -9,12 +9,16 @@ import { DialogComponent } from './dialog/dialog.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { FormsModule } from '@angular/forms';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { BillDetailsComponent } from './bill-details/bill-details/bill-details.component';
+import { TransactionTableComponent } from './bill-details/transaction-table/transaction-table.component';
 
 @NgModule({
   declarations: [
     BillComponent,
     BillTableComponent,
-    DialogComponent
+    DialogComponent,
+    BillDetailsComponent,
+    TransactionTableComponent
 
   ],
   imports: [
