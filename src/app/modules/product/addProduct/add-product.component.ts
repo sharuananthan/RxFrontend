@@ -24,7 +24,7 @@ export class AddProductComponent implements OnInit {
       redirectUrl: ['', [Validators.required]],
       webhookSecret: ['', [Validators.required]],
       freeTrialDays: [0,[ Validators.required]],
-      
+
 
     })
   }
@@ -32,27 +32,16 @@ export class AddProductComponent implements OnInit {
   get f() { return this.userForm.controls; }
 
   onSubmit() {
-    this.submitted=true;
+
     if(this.submitted==true){
-      return 
+      return
     }
-    console.log(this.userForm.invalid)
-
-   
-console.log(this.userForm.value);
-
     this.productservice.CreateProduct(this.userForm.value)
     .subscribe( res=>{
-      
       this.userForm.reset();
-
+      console.log(res);
     }
-      
     )
+    this.submitted=true;
   }
-
-
-
-
-  
 }
