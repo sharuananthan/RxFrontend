@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators, NgForm } from '@angular/forms';
-import { AddProduct } from 'src/app/data/schema/addProduct.model';
-//import { SharedService } from 'src/app/shared/shared.service';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ProductService } from 'src/app/data/service/Product/product.service';
 
 @Component({
   selector: 'app-add-product',
@@ -11,83 +10,49 @@ import { AddProduct } from 'src/app/data/schema/addProduct.model';
 })
 export class AddProductComponent implements OnInit {
 
-  userForm!: FormGroup;
+  userForm: FormGroup= new FormGroup({});
+  submitted=false;
 
-  product: AddProduct = {
-    name: '',
-    description : '',
-    logo:'',
-    webUrl:'',
-    redirectUrl:'',
-    key:'',
-    period:'',
-    addons:''
-  }
-
-
-  // refreshProductList: any;
-  constructor(private fb: FormBuilder) { }
-
-  ProductList: any = [];
+  constructor(private fb: FormBuilder,private productservice: ProductService) { }
 
   ngOnInit(): void {
     this.userForm = this.fb.group({
-      name: ['', Validators.required],
-      description: ['', Validators.required],
-      logo: ['', Validators.required],
-      webUrl: ['', Validators.required],
-      redirectUrl: ['', Validators.required],
-      key: ['', Validators.required],
-      period: ['', Validators.required],
-      addons: ['', Validators.required]
+      name: ['',[ Validators.required]],
+      description: ['', [Validators.required]],
+      logoURL: ['',[ Validators.required]],
+      webhookURL: ['',[ Validators.required]],
+      redirectUrl: ['', [Validators.required]],
+      webhookSecret: ['', [Validators.required]],
+      freeTrialDays: [0,[ Validators.required]],
+      
 
     })
-
-
-    // this.refreshProductList();
-
   }
-
-  onSubmit() {
-console.log(this.product);
-  }
-
-
-  // resetForm(userForm?: NgForm) {
-  //   if (userForm)
-  //   userForm.reset();
-  //   this.doctorService.selectedDoctor = {
-  //     _id: "",
-  //     name: "",
-  //     address: "",
-  //     mobile_no: "",
-  //    email: ""
-  //   }
-  // }
-
-  // onSubmit(userform: NgForm) {
-  //   if (userform.value.name == "") {
-  //     this.service.addProduct(userform.value).subscribe((res) => {
-
-  //       this.refreshProductList();
-
-  //     });
-  //   }
-  //   else { 
-  //     this.service.addProduct(userform.value).subscribe((res) => {
-
-  //       this.refreshProductList();
-
-  //     });
-  //   }
-  // }
-
-  // refreshProductList() {
-  //   this.service.getProductList().subscribe(Product => {
-  //     this.service.Products=Product[];
-  //   });
-  // }
-
 
   get f() { return this.userForm.controls; }
+
+  onSubmit() {
+    this.submitted=true;
+    if(this.submitted==true){
+      return 
+    }
+    console.log(this.userForm.invalid)
+
+   
+console.log(this.userForm.value);
+
+    this.productservice.CreateProduct(this.userForm.value)
+    .subscribe( res=>{
+      
+      this.userForm.reset();
+
+    }
+      
+    )
+  }
+
+
+
+
+  
 }

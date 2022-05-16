@@ -1,12 +1,12 @@
 export interface AddProduct{
     name: String,
     description :String ,
-    logo:String,
-    webUrl:String,
+    logoURL:String,
+    webhookURL:String,
     redirectUrl:String,
-    key:String,
-    period:any,
-    addons:String
+    webhookSecret:String,
+    freeTrialDays:number,
+    
    
     //addons:{addon:String}[]   
    
