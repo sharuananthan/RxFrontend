@@ -11,6 +11,8 @@ import { ProductService } from 'src/app/data/service/Product/product.service';
 export class AddProductComponent implements OnInit {
   productForm: FormGroup = new FormGroup({});
   submitted = false;
+  logoPreviewPath!: string;
+  imageSelected:boolean = false;
 
   constructor(
     private fb: FormBuilder,
@@ -54,8 +56,8 @@ export class AddProductComponent implements OnInit {
         this.productForm.reset();
         console.log(res);
       });
-    console.log(formData);
     this.submitted = true;
+    this.logoPreviewPath="";
   }
   onFileChange(event: any) {
     if (event.target.files.length > 0) {
@@ -63,6 +65,12 @@ export class AddProductComponent implements OnInit {
       this.productForm.patchValue({
         logoImage: file,
       });
+      const reader = new FileReader();
+      reader.onload = () => {
+        this.logoPreviewPath = reader.result as string;
+      }
+      reader.readAsDataURL(file);
+      this.imageSelected = true;
     }
   }
 }
