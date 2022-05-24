@@ -9,30 +9,41 @@ import { Product } from 'src/app/data/schema/product.model'
   styleUrls: ['./product-details.component.css']
 })
 export class ProductDetailsComponent implements OnInit {
-  productID!:string;
-  product: Product ;
+  productID:string;
+  product!: Product ;
   
  
 
 
-  constructor(public route: ActivatedRoute,public router: Router, private productservice:ProductService) {
-    this.productID = this.route.snapshot.paramMap.get('id');
-  }
-
-  ngOnInit(): void {
+  constructor(public _activatedRoute: ActivatedRoute,public router: Router, private productservice:ProductService) {
     this.productID = this._activatedRoute.snapshot.paramMap.get('id')||'';
   }
 
+  ngOnInit(): void {
+   
+    this.getProductById(this.productID);
+  }
+ 
 
-  getProduct(productId:string){
+  getProductById(productId:string){
     this.productservice.getProductById(this.productID).subscribe(resp => {
       this.product = {
-        _id: resp._id,
-        author_name: resp.author_name,
-        title: resp.title,
-        body: resp.body,
-        creationDate:resp.creationDate,
+        
+        productId: resp.productId,
+        name: resp.name,
+        description: resp.description,
+        redirectUrl:resp.redirectUrl,
+        webhookURL: resp.webhookURL,
+        webhookSecret: resp.webhookSecret,
+        logoURL:resp.logoURL,
+        freeTrialDays: resp.freeTrialDays,
+        planCount:resp.planCount,
+        addOnCount:resp.addOnCount,
+
+
       };
+
+    
     });
   }
 

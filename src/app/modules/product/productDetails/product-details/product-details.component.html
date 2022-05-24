@@ -7,20 +7,20 @@
   <div class="cont">
     <div class="details">
       <div class="details-head">
-        Customer Details
+        Product Details
       </div>
       <mat-divider></mat-divider>
     </div>
   
     <div class="details-container">
-      <div><b>Product ID</b> {{productID}} </div>
-      <div><b>Product Name</b> </div>
-      <div><b>Description</b></div>
-      <div><b>Re-Direct URL</b> </div>
-      <div><b>Webhook URL</b></div>
-      <div><b>Secret Key</b></div>
-      <div><b>Logo URL</b></div>
-      <div><b>Free Trial Days</b></div>
+      <div><b>Product ID</b> {{product.productId}} </div>
+      <div><b>Product Name</b>{{product.name}} </div>
+      <div><b>Description</b>{{product.description}}</div>
+      <div><b>Re-Direct URL</b> {{product.redirectUrl}}</div>
+      <div><b>Webhook URL</b>{{product.webhookURL}}</div>
+      <div><b>Secret Key</b>{{product.webhookSecret}}</div>
+      <div><b>Logo URL</b>{{product.logoURL}}</div>
+      <div><b>Free Trial Days</b>{{product.freeTrialDays}}</div>
     </div>
   
     <div class="subs-info">
