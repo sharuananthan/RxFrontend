@@ -14,13 +14,11 @@ export class AddPlanComponent implements OnInit {
   ngOnInit(): void {
     this.userForm = this.fb.group({
       name: ['', Validators.required ],
+      price:[0, Validators.required ],
+      duration:[0, Validators.required ],
       description:['', Validators.required ],
-      logo:['', Validators.required ],
-      webUrl:['', Validators.required ],
-      redirectUrl:['', Validators.required ],
-      key:['', Validators.required ],
-      period:['', Validators.required ],
-
+      trial:[true, Validators.required ],
+     
     })
 
     

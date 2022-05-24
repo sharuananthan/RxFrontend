@@ -10,7 +10,9 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { AddProductComponent } from './addProduct/add-product.component';
 import {  ReactiveFormsModule } from '@angular/forms';
 import { AddPlanComponent } from './addPlan/add-plan.component';
-
+import { ProductDetailsComponent } from './productDetails/product-details/product-details.component';
+import {MatDividerModule} from '@angular/material/divider';
+import { PlanTableComponent } from './productDetails/plan-table/plan-table.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { AddPlanComponent } from './addPlan/add-plan.component';
     ProductPlanComponent,
     AddProductComponent,
     AddPlanComponent,
+    ProductDetailsComponent,
+    PlanTableComponent,
    
     
   ],
@@ -29,7 +33,7 @@ import { AddPlanComponent } from './addPlan/add-plan.component';
     MatTableModule,
     MatTabsModule,
     ReactiveFormsModule,
-    
+    MatDividerModule
    
     
   ],exports: [
