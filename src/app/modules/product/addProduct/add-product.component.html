@@ -8,7 +8,7 @@
     <div class="container1">Add Product</div>
 
     <div class="container2">
-      <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+      <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
         <div class="form-group">
           <label class="labelName">Product Name</label>
           <input type="text" class="form-control" formControlName="name" />
@@ -21,20 +21,11 @@
 
         <div class="form-group">
           <label class="labelName">Description </label>
-          <input
-            type="textarea"
-            class="form-control-des"
-            formControlName="description"
-          />
-          <div
-            class="invalid"
-            *ngIf="f['description'].touched && f['description'].invalid"
-          >
-            <div
-              *ngIf="
+          <input type="textarea" class="form-control-des" formControlName="description" />
+          <div class="invalid" *ngIf="f['description'].touched && f['description'].invalid">
+            <div *ngIf="
                 f['description'].errors && f['description'].errors['required']
-              "
-            >
+              ">
               Description is required.
             </div>
           </div>
@@ -42,44 +33,32 @@
 
         <div class="form-group">
           <label class="labelName">Logo</label>
-          <input
-            type="text"
-            class="form-control-des"
-            formControlName="logoURL"
-          />
-          <div
-            class="invalid"
-            *ngIf="f['logoURL'].touched && f['logoURL'].invalid"
-          >
-            <div *ngIf="f['logoURL'].errors && f['logoURL'].errors['required']">
-              logo is required.
+          <!-- <input type="text" class="form-control-des" formControlName="logoURL" /> -->
+          <!-- <div class="invalid" *ngIf="f['logoURL'].touched && f['logoURL'].invalid">
+            <div *ngIf="f['logoImage'].errors && f['logoImage'].errors['required']">
+              Logo image is required.
             </div>
+          </div> -->
+          <div class="imgup">
+            <div class="icon-container">
+              <img src="assets/icons/img.png" alt="" />
+              <div>Drop your image here, or browse</div>
+            </div>
+            <input id="fileUpload" type="file"
+
+              (change)="onFileChange($event)"
+              accept="image/*"
+             formControlName="logoPath" />
           </div>
-          <!-- <div class="imgup">
-              <div class="icon-container">
-                <img src="assets/icons/img.png" alt="" />
-                <div>Drop your image here, or browse</div>
-              </div>
-              <input id="fileUpload" type="file" accept="image/*" formControlName="logo" />
-            </div> -->
         </div>
 
         <div class="form-group">
           <label class="labelName">Webhook URL</label>
-          <input
-            type="text"
-            class="form-control"
-            formControlName="webhookURL"
-          />
-          <div
-            class="invalid"
-            *ngIf="f['webhookURL'].touched && f['webhookURL'].invalid"
-          >
-            <div
-              *ngIf="
+          <input type="text" class="form-control" formControlName="webhookURL" />
+          <div class="invalid" *ngIf="f['webhookURL'].touched && f['webhookURL'].invalid">
+            <div *ngIf="
                 f['webhookURL'].errors && f['webhookURL'].errors['required']
-              "
-            >
+              ">
               URL is required.
             </div>
           </div>
@@ -87,20 +66,11 @@
 
         <div class="form-group">
           <label class="labelName">Redirect URL</label>
-          <input
-            type="text"
-            class="form-control"
-            formControlName="redirectUrl"
-          />
-          <div
-            class="invalid"
-            *ngIf="f['redirectUrl'].touched && f['redirectUrl'].invalid"
-          >
-            <div
-              *ngIf="
+          <input type="text" class="form-control" formControlName="redirectUrl" />
+          <div class="invalid" *ngIf="f['redirectUrl'].touched && f['redirectUrl'].invalid">
+            <div *ngIf="
                 f['redirectUrl'].errors && f['redirectUrl'].errors['required']
-              "
-            >
+              ">
               URL is required.
             </div>
           </div>
@@ -108,21 +78,12 @@
 
         <div class="form-group">
           <label class="labelName">Secret Key</label>
-          <input
-            type="text"
-            class="form-control"
-            formControlName="webhookSecret"
-          />
-          <div
-            class="invalid"
-            *ngIf="f['webhookSecret'].touched && f['webhookSecret'].invalid"
-          >
-            <div
-              *ngIf="
+          <input type="text" class="form-control" formControlName="webhookSecret" />
+          <div class="invalid" *ngIf="f['webhookSecret'].touched && f['webhookSecret'].invalid">
+            <div *ngIf="
                 f['webhookSecret'].errors &&
                 f['webhookSecret'].errors['required']
-              "
-            >
+              ">
               Secret Key is required.
             </div>
           </div>
@@ -130,21 +91,12 @@
 
         <div class="form-group">
           <label class="labelName">Trial Period</label>
-          <input
-            type="number"
-            class="form-control"
-            formControlName="freeTrialDays"
-          />
-          <div
-            class="invalid"
-            *ngIf="f['freeTrialDays'].touched && f['freeTrialDays'].invalid"
-          >
-            <div
-              *ngIf="
+          <input type="number" class="form-control" formControlName="freeTrialDays" />
+          <div class="invalid" *ngIf="f['freeTrialDays'].touched && f['freeTrialDays'].invalid">
+            <div *ngIf="
                 f['freeTrialDays'].errors &&
                 f['freeTrialDays'].errors['required']
-              "
-            >
+              ">
               Trial Period is required.
             </div>
           </div>
