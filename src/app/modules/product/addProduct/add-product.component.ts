@@ -9,50 +9,68 @@ import { ProductService } from 'src/app/data/service/Product/product.service';
   //providers:[SharedService]
 })
 export class AddProductComponent implements OnInit {
+  productForm: FormGroup = new FormGroup({});
+  submitted = false;
+  logoPreviewPath!: string;
+  imageSelected:boolean = false;
 
-  userForm: FormGroup= new FormGroup({});
-  submitted=false;
-
-  constructor(private fb: FormBuilder,private productservice: ProductService) { }
+  constructor(
+    private fb: FormBuilder,
+    private productservice: ProductService
+  ) {}
 
   ngOnInit(): void {
-    this.userForm = this.fb.group({
-      name: ['',[ Validators.required]],
+    this.productForm = this.fb.group({
+      name: ['', [Validators.required]],
       description: ['', [Validators.required]],
-      logoURL: ['',[ Validators.required]],
-      webhookURL: ['',[ Validators.required]],
+      logoPath: [''],
+      logoImage: [null],
+      webhookURL: ['', [Validators.required]],
       redirectUrl: ['', [Validators.required]],
       webhookSecret: ['', [Validators.required]],
-      freeTrialDays: [0,[ Validators.required]],
-      
-
-    })
+      freeTrialDays: [0, [Validators.required]],
+    });
   }
 
-  get f() { return this.userForm.controls; }
+  get f() {
+    return this.productForm.controls;
+  }
 
   onSubmit() {
-    this.submitted=true;
-    if(this.submitted==true){
-      return 
+    if (this.submitted == true) {
+      return;
     }
-    console.log(this.userForm.invalid)
+    const formData = new FormData();
+    formData.append('name', this.productForm.value.name);
+    formData.append('description', this.productForm.value.description);
+    formData.append('logoImage', this.productForm.value.logoImage);
+    formData.append('webhookURL', this.productForm.value.webhookURL);
+    formData.append('redirectUrl', this.productForm.value.redirectUrl);
+    formData.append('freeTrialDays', this.productForm.value.freeTrialDays);
 
-   
-console.log(this.userForm.value);
+    console.log(this.productForm.value);
 
-    this.productservice.CreateProduct(this.userForm.value)
-    .subscribe( res=>{
-      
-      this.userForm.reset();
-
-    }
-      
-    )
+    this.productservice
+      .CreateProduct(formData)
+      .subscribe((res) => {
+        this.productForm.reset();
+        console.log(res);
+      });
+    this.submitted = true;
+    this.logoPreviewPath="";
   }
-
-
-
-
-  
+  onFileChange(event: any) {
+    if (event.target.files.length > 0) {
+      const file = event.target.files[0];
+      this.productForm.patchValue({
+        logoImage: file,
+      });
+      const reader = new FileReader();
+      reader.onload = () => {
+        this.logoPreviewPath = reader.result as string;
+      }
+      reader.readAsDataURL(file);
+      this.imageSelected = true;
+    }
+  }
 }
