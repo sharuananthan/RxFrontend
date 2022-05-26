@@ -7,8 +7,12 @@ body {
   scroll-behavior: smooth;
   margin: 0;
   font-family: Poppins;
-}
+  box-sizing: border-box;
 
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 :root {
   --primary-blue: #347AE2;
   --navWhite: #ECEFF4;

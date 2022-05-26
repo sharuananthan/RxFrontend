@@ -33,15 +33,12 @@ app-profile {
   border: none;
   height: 45px;
   width: 100%;
-    box-sizing: border-box;
   border-radius: 10px 0 0 10px;
 
 }
 .mat-autocomplete{
   position: relative;
     width: 93% !important;
-}
-.mat-option{
 }
 
 .search {
