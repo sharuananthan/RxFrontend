@@ -13,6 +13,8 @@ import { AddPlanComponent } from './addPlan/add-plan.component';
 import { ProductDetailsComponent } from './productDetails/product-details/product-details.component';
 import {MatDividerModule} from '@angular/material/divider';
 import { PlanTableComponent } from './productDetails/plan-table/plan-table.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
+
 
 @NgModule({
   declarations: [
@@ -33,8 +35,8 @@ import { PlanTableComponent } from './productDetails/plan-table/plan-table.compo
     MatTableModule,
     MatTabsModule,
     ReactiveFormsModule,
-    MatDividerModule
-   
+    MatDividerModule,
+    MatPaginatorModule
     
   ],exports: [
 
