@@ -14,6 +14,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 
 import { MatInputModule } from '@angular/material/input';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MarketplaceProductDetailComponent } from './marketplace-product-detail/marketplace-product-detail.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
     MarketplaceProductComponent,
     MarketplaceSearchComponent,
     MarketplaceFlex1Component,
-    MarketplaceFlex2Component
+    MarketplaceFlex2Component,
+    MarketplaceProductDetailComponent
   ],
   imports: [
     CommonModule,
