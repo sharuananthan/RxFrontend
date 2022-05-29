@@ -1,7 +1,8 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
+import { AddOnUsage } from 'src/app/data/schema/addUsage';
 import { Subscription } from 'src/app/data/schema/subcription';
 import { SubscriptionService } from 'src/app/data/service/Subscription/subscription.service';
 import { DialogComponent } from '../../dialog/dialog.component';
@@ -12,27 +13,30 @@ import { DialogComponent } from '../../dialog/dialog.component';
   styleUrls: ['./add-on-table.component.css']
 })
 export class AddOnTableComponent implements OnInit {
+  @Input() subscriptionId!:string;
 
   searchKey! : string;
-  subscriptions:Subscription[]=[];
-  displayedColumns: string[] = ['subscriptionId','customerName','product','plan','createdDate','endDate','status'];
+  addOnUsages:AddOnUsage[]=[];
+  displayedColumns: string[] = ['addOnName','date','units','cost'];
   dataSource =new MatTableDataSource();
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   constructor(private _dialog:MatDialog,private _subscriptionService:SubscriptionService) { }
   ngOnInit(): void {
-    this.getSubscriptions();
+    this.getAddOnUsage(this.subscriptionId);
   }
 
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
   }
 
-  getSubscriptions(){
-    this._subscriptionService.getAllSubscriptions().subscribe(data=>{
-      this.subscriptions=data;
-      this.dataSource.data=this.subscriptions;
-  })
-}
+
+  getAddOnUsage(subscriptionId:string){
+    this._subscriptionService.getAddOnUsage(subscriptionId).subscribe(data=>{
+      this.addOnUsages=data;
+      this.dataSource.data=this.addOnUsages;
+    })
+  }
+
 
   openDialog(row:any) {
     console.log('Row clicked', row);

@@ -4,7 +4,6 @@ import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
 import { Subscription } from 'src/app/data/schema/subcription';
 import { SubscriptionService } from 'src/app/data/service/Subscription/subscription.service';
-import { DialogComponent } from '../dialog/dialog.component';
 
 @Component({
   selector: 'app-sub-table',

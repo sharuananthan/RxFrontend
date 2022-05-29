@@ -24,6 +24,14 @@ th {
   justify-content:flex-end;
 
 }
+.statusActive{
+  color: #00a67e;
+  font-weight: bold;
+}
+.statusInactive{
+  color: red;
+  font-weight: bold;
+}
 
 .form-group input:focus {outline:none!important;}
 .mat-row{

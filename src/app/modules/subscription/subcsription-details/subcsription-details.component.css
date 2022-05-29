@@ -20,6 +20,11 @@ margin-top: 20px;
 }
 .details-container{
   margin-top: 30px;
+  display: flex;
+}
+.detailName{
+  width: 200px;
+
 }
 .table-cont{
   margin-top: 20px;
