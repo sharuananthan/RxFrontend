@@ -1,0 +1,47 @@
+<div class="top-content">
+  <div class="top">
+    <div class="logo">
+      <img src="../../../assets/logo/rx.png" />
+    </div>
+    <app-profile></app-profile>
+  </div>
+
+  <div class="search">
+    <div class="search-box">
+      <input class="form-control" type="text" placeholder="Start searching products" [formControl]="myControl"
+        [matAutocomplete]="auto">
+      <mat-autocomplete #auto="matAutocomplete">
+        <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+          {{option}}
+        </mat-option>
+      </mat-autocomplete>
+
+    </div>
+    <div class="button-box">
+      <a [routerLink]="['/marketplace/search']"><button mat-button class="button" type="submit"><img
+            src="../../../assets/icons/search.png" /></button></a>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="box-1"><img src="../../../assets/icons/c1.png" /></div>
+  <div class="box-2">
+    <div class="container1">
+      <div class="containerItem1">{{product}}</div>
+
+      <div class="containerItem2">
+        <p>By {{organization}}</p>
+      </div>
+    </div>
+    <div><a [routerLink]="['/auth/signup']"> <button mat-button class="name-button">Continue to Subscribe</button>
+      </a></div>
+  </div>
+</div>
+
+<div></div>
+
+
+
+<!-- <app-footer></app-footer> -->
