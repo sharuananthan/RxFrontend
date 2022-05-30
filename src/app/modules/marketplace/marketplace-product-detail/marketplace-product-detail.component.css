@@ -64,56 +64,66 @@ app-profile {
 }
 
 .container {
-    /* background-color: var(--navWhite); */
+    background-color: var(--navWhite);
     width: 90%;
     margin: 0 auto;
     height: 130px;
     border-radius: 12px;
-
-    display: grid;
-    grid-template-columns: auto auto ;
+    display: flex;
+    margin-top: 15px;
+    /* grid-template-columns: auto auto ; */
     /* justify-content: space-between; */
 }
 
-.box1{
+.box-1{
    
     border: none ;
-    padding: 12px;
-    width:  20%;
-    background-color: rgb(255, 213, 0) !important ;
-    margin-left: 50px;
-    align-content: center;
+    /* padding: 12px; */
+    width:  5%;
+    /* height: 100px; */
+   
+margin: auto 0 auto 30px;
+    /* margin-left: 50px; */
+    
   }
-  .box2{
+  .box-2{
    
     border: none ;
-    padding: 12px;
-    width: 80%;
-    background-color: rgb(39, 35, 90)  !important;
-    margin-left: 50px;
+    /* padding: 12px; */
+    width:95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
 .containerItem1 {
     color: var(--primary-blue);
     font-size: 22px;
     margin: 10px 10px 0 10px;
-    padding: 20px 20px 0 20px;
+    padding: 0 20px 0 20px;
     font-weight: bold;
     font-style: normal;
     font-weight: 600;
-    background-color: rgb(161, 20, 179) !important ;
+   
+}
+.containerItem2 {
+    margin: 0 10px 0 10px;
+    padding: 0 20px 0 20px;
+    font-weight: bold;
+    font-style: normal;
+    font-weight: 600;
+   
 }
 
 
+/* .container1 {
+    
+   
 
-.container1 {
-    display: flex;
-    justify-content: space-between;
+   
+} */
 
-    background-color: rgb(146, 237, 26) !important ;
-}
-
-.container1>div {
+.box-2>div {
     margin: 0 10px 0 10px;
     padding: 0 20px 0 20px;
 
@@ -123,7 +133,6 @@ app-profile {
     font-size: 17px;
     font-style: normal;
     font-weight: normal;
-    background-color: rgb(237, 26, 219) !important ;
 }
 
 .name-button {
