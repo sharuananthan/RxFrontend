@@ -64,15 +64,34 @@ app-profile {
 }
 
 .container {
-    background-color: var(--navWhite);
+    /* background-color: var(--navWhite); */
     width: 90%;
     margin: 0 auto;
     height: 130px;
     border-radius: 12px;
 
-    display: flex;
-    justify-content: space-around; 
+    display: grid;
+    grid-template-columns: auto auto ;
+    /* justify-content: space-between; */
 }
+
+.box1{
+   
+    border: none ;
+    padding: 12px;
+    width:  20%;
+    background-color: rgb(255, 213, 0) !important ;
+    margin-left: 50px;
+    align-content: center;
+  }
+  .box2{
+   
+    border: none ;
+    padding: 12px;
+    width: 80%;
+    background-color: rgb(39, 35, 90)  !important;
+    margin-left: 50px;
+  }
 
 .containerItem1 {
     color: var(--primary-blue);
@@ -82,6 +101,7 @@ app-profile {
     font-weight: bold;
     font-style: normal;
     font-weight: 600;
+    background-color: rgb(161, 20, 179) !important ;
 }
 
 
@@ -89,6 +109,8 @@ app-profile {
 .container1 {
     display: flex;
     justify-content: space-between;
+
+    background-color: rgb(146, 237, 26) !important ;
 }
 
 .container1>div {
@@ -101,6 +123,7 @@ app-profile {
     font-size: 17px;
     font-style: normal;
     font-weight: normal;
+    background-color: rgb(237, 26, 219) !important ;
 }
 
 .name-button {
