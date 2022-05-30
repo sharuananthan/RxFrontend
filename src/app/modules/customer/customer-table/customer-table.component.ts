@@ -14,7 +14,7 @@ import { CustomerService } from 'src/app/data/service/Customer/customer.service'
 export class CustomerTableComponent implements AfterViewInit,OnInit {
   searchKey!: string;
   customers: Customer [] = [];
-  displayedColumns: string[] = ['customerId', 'name','email','status'];
+  displayedColumns: string[] = ['name','email','status'];
   dataSource =new MatTableDataSource<Customer>();
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 

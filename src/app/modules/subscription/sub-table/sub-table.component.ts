@@ -14,7 +14,6 @@ export class SubTableComponent implements AfterViewInit, OnInit {
   searchKey!: string;
   subscriptions: Subscription[] = [];
   displayedColumns: string[] = [
-    'subscriptionId',
     'customerName',
     'product',
     'plan',
