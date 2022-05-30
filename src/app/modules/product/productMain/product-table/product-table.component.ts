@@ -37,16 +37,15 @@ export class ProductTableComponent implements AfterViewInit, OnInit {
     this.productservice.getProducts().subscribe((data: Product[]) => {
       this.products = data;
       this.dataSource.data = this.products
-
-      
       //console.log(this.dataSource)
 
     });
   }
+
+
 
   navigate(row: any) {
     this._router.navigate(['/product/details', row.productId]);
   }
 
 }
-
