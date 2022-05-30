@@ -1,5 +1,5 @@
 export interface Subscription{
-  subcriptionId:string;
+  subscriptionId:string;
   customerName:string;
   product:string;
   plan:string;

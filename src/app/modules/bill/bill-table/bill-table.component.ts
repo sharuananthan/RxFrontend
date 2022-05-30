@@ -12,7 +12,7 @@ import { DialogComponent } from '../dialog/dialog.component';
 
 export class BillTableComponent implements AfterViewInit {
   searchKey! : string;
-  displayedColumns: string[] = ['customerId', 'name','email','status'];
+  displayedColumns: string[] = ['email', 'name','generatedDate','amount'];
   dataSource = new MatTableDataSource();
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   constructor(private _dialog:MatDialog) { }
