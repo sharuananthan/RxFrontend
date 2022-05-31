@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import {FormControl} from '@angular/forms';
 import {Observable} from 'rxjs';
 import {map, startWith} from 'rxjs/operators';
+import { MatTableDataSource } from '@angular/material/table';
+import { Plan } from 'src/app/data/schema/plan.model'
+
 
 @Component({
   selector: 'app-marketplace-product-detail',
@@ -10,6 +13,11 @@ import {map, startWith} from 'rxjs/operators';
 })
 
 export class MarketplaceProductDetailComponent implements OnInit {
+
+  dataSource = new MatTableDataSource<Plan>();
+  displayedColumns: String[] = ['planId',  'name','price' ]
+
+
 
  product:string='Flowdoh';
  organization:string='Enadoc';

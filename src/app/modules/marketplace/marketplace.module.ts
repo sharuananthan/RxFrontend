@@ -7,14 +7,14 @@ import { MarketplaceProductComponent } from './marketplace-product/marketplace-p
 import { MarketplaceSearchComponent } from './marketplace-search/marketplace-search/marketplace-search.component';
 import { MarketplaceFlex1Component } from './marketplace-search/marketplace-flex1/marketplace-flex1.component';
 import { MarketplaceFlex2Component } from './marketplace-search/marketplace-flex2/marketplace-flex2.component';
-
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
-
 import { MatInputModule } from '@angular/material/input';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MarketplaceProductDetailComponent } from './marketplace-product-detail/marketplace-product-detail.component';
+import { MatDividerModule } from '@angular/material/divider';
+import {MatTableModule} from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -34,7 +34,9 @@ import { MarketplaceProductDetailComponent } from './marketplace-product-detail/
     MatFormFieldModule,
     ReactiveFormsModule,
     MatInputModule,
-    MatAutocompleteModule 
+    MatAutocompleteModule,
+    MatDividerModule,
+    MatTableModule
   
   ],
 })

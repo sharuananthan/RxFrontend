@@ -27,6 +27,11 @@ app-profile {
     width:7%;
 }
 
+.button-publish{
+    margin: auto;
+   
+  }
+
 .form-control {
   padding-left: 20px;
   text-align: start;
