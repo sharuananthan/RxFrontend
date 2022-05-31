@@ -40,8 +40,64 @@
   </div>
 </div>
 
-<div></div>
+
+<div class="cont">
+  <div class="details-head">Product Overview</div>
+
+  <mat-divider></mat-divider>
+  <p class="overview">A random paragraph can also be an excellent way for a writer to tackle writers' block.
+    Writing block can often happen due to being
+    stuck with a current project that the writer is trying to complete.
+    By inserting a completely random paragraph from which to begin, it can take down some of the issues Writing block
+    often happen due to being stuck with a current project that the writer is trying to complete. By inserting a
+    completely random paragraph from which to begin, it can take down some of the issues..</p>
 
 
+    <div class="details-head">Pricing</div>
+    <mat-divider></mat-divider>
+
+<div class="flexBox">
+  <div class="flex1">
+    <table mat-table [dataSource] = "dataSource"  >
+
+      <ng-container  matColumnDef="planId">
+        <th mat-header-cell *matHeaderCellDef class="header"> Plan ID </th>
+        <td mat-cell *matCellDef="let Plan "> {{Plan.planId}} </td>
+      </ng-container>
+
+
+      <ng-container  matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef class="header"> Plan Name </th>
+        <td mat-cell *matCellDef="let Plan "> {{Plan.name}} </td>
+      </ng-container>
+
+      <ng-container  matColumnDef="price">
+        <th mat-header-cell *matHeaderCellDef class="header"> Amount </th>
+        <td mat-cell *matCellDef="let Plan "> {{Plan.price}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row (click)="(row)" *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+
+
+  <div class="flex2">
+<p class="trialH">Free Trial</p>
+<ul>
+  <li class="trial">Try one unit of this product for 30 days</li>
+  <li class="trial">There will be no software charges for this product</li>
+</ul>
+
+
+<div class="buttonCenter"><a [routerLink]="['/auth/signup']"> <button mat-button class="start-button">Get Started</button>
+</a></div>
+  </div>
+</div>
+    
+  
+  
+
+</div>
 
 <!-- <app-footer></app-footer> -->
