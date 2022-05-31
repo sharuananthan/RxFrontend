@@ -6,6 +6,7 @@ import { Customer } from '../../schema/customer';
   providedIn: 'root'
 })
 export class CustomerService {
+
   readonly customerBaseApiUrl = 'https://localhost:44352/api/customer';
 
   constructor(private httpClient: HttpClient) { }
@@ -13,9 +14,9 @@ export class CustomerService {
   getCustomers():Observable<Customer[]> {
     return this.httpClient.get<Customer []>(this.customerBaseApiUrl)
   }
-
-
-
+  getCustomerDetails(customerId: string): Observable<Customer> {
+    return this.httpClient.get<Customer>(`${this.customerBaseApiUrl}/${customerId}`)
+  }
 
 
 

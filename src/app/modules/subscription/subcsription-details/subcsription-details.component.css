@@ -3,29 +3,32 @@
   margin: 0 auto;
   height: 100%;
 }
-.details-head{
+
+.details-head {
   font-weight: 600;
-font-size: 18px;
-line-height: 27px;
-color: var(--primary-blue);
-/* margin-bottom: 20px; */
-margin-top: 20px;
+  font-size: 18px;
+  line-height: 27px;
+  color: var(--primary-blue);
+  margin-top: 20px;
 }
-.subs-head{
+.subs-head {
   font-weight: 600;
   font-size: 18px;
   line-height: 27px;
   color: var(--primary-blue);
   margin-top: 30px;
 }
-.details-container{
+.details-container {
   margin-top: 30px;
   display: flex;
 }
-.detailName{
+.detailTitle {
   width: 200px;
-
+  text-align: right;
 }
-.table-cont{
+.detail {
+  margin-left: 1%;
+}
+.table-cont {
   margin-top: 20px;
 }
