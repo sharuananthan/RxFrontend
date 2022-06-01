@@ -1,0 +1,7 @@
+.footer {
+    height: 50px;
+    background-color: var(--navWhite);
+    padding: 10px;
+    text-align: center;
+
+}

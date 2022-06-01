@@ -1,0 +1,40 @@
+<div class="app-container">
+  <app-side-nav></app-side-nav>
+  <div class="content">
+    <div class="right-align">
+      <app-profile></app-profile>
+    </div>
+    <div class="cont">
+      <div class="details">
+        <div class="details-head">Subscription Details</div>
+        <mat-divider></mat-divider>
+        <div class="details-container">
+          <div class="detailTitle">
+            <div><b>Subscription Id : </b></div>
+            <div><b>Customer Name : </b></div>
+            <div><b>Product Name : </b></div>
+            <div><b>Plan Name : </b></div>
+            <div><b>Created Date : </b></div>
+            <div><b>End Date : </b></div>
+            <div><b>Status : </b></div>
+          </div>
+          <div class="detail">
+            <div>{{ subscription?.subscriptionId }}</div>
+            <div>{{ subscription?.customerName }}</div>
+            <div>{{ subscription?.product }}</div>
+            <div>{{ subscription?.plan }}</div>
+            <div>{{ subscription?.createdDate }}</div>
+            <div>{{ subscription?.endDate }}</div>
+            <div>{{ subscription?.status }}</div>
+          </div>
+        </div>
+      </div>
+      <div class="details-head">Add-on Usage Details</div>
+      <mat-divider></mat-divider>
+
+      <div class="table-cont">
+        <app-add-on-table [subscriptionId]="subscriptionId"></app-add-on-table>
+      </div>
+    </div>
+  </div>
+</div>

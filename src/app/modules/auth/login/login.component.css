@@ -18,20 +18,20 @@
   background-color: var(--navWhite);
   border-radius:0px 86px 86px 0px;
   width:90%;
-  
+
 }
 
 .box-2 {
   width:75%;
   margin-top: 30%;
   color: black;
-  font-family: "Poppins", Arial, Helvetica, sans-serif;  
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
 }
 
 .logo{
     margin: 230px 0px 0px 250px;
     width: 250px;
-    height: 250px; 
+    height: 250px;
 
   }
 
@@ -39,7 +39,7 @@
     margin-bottom: 10px;
     font-size: 14px;
     font-weight: bold;
-   
+
 }
 .form-control{
   width: 500px;
@@ -49,11 +49,12 @@
   border-radius: 10px;
   font-size: 14px;
   border: none;
-  
+  padding-left: 20px;
+
 }
 
-::placeholder { 
- 
+::placeholder {
+
   padding-left: 2%;
 }
 
@@ -78,5 +79,5 @@ font-weight: bold;
 
 .invalid{
     color: red;
-    
+
 }

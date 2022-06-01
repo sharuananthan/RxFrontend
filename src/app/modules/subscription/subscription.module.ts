@@ -5,10 +5,14 @@ import { SubscriptionRoutes } from './subscription-routing.module';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { SubGridComponent } from './sub-grid/sub-grid.component';
 import { SubTableComponent } from './sub-table/sub-table.component';
-import {MatSortModule} from '@angular/material/sort';
 import {MatTableModule} from '@angular/material/table';
 import {MatDialogModule} from '@angular/material/dialog';
 import { DialogComponent } from './dialog/dialog.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { FormsModule } from '@angular/forms';
+import { SubcsriptionDetailsComponent } from './subcsription-details/subcsription-details.component';
+import { AddOnTableComponent } from './subcsription-details/add-on-table/add-on-table.component';
+import { MatDivider, MatDividerModule } from '@angular/material/divider';
 
 
 @NgModule({
@@ -16,14 +20,19 @@ import { DialogComponent } from './dialog/dialog.component';
     SubscriptionComponent,
     SubGridComponent,
     SubTableComponent,
-    DialogComponent
+    DialogComponent,
+    SubcsriptionDetailsComponent,
+    AddOnTableComponent
   ],
   imports: [
     CommonModule,
     SubscriptionRoutes,
     SharedModule,
-    MatSortModule,
-    MatTableModule,MatDialogModule
+    MatTableModule,
+    MatDialogModule,
+    MatPaginatorModule,
+    FormsModule,
+    MatDividerModule
 
   ],exports: [
 

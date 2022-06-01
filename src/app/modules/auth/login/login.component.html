@@ -5,8 +5,8 @@
         <form [formGroup]="loginForm">
 
             <div class="form-group">
-                <label>User Email</label>
-                <div> <input type="email" class="form-control" formControlName="email" placeholder="akshi98@gmail.com" /> </div>
+                <label>Email</label>
+                <div> <input type="email" class="form-control" formControlName="email" placeholder="Enter Your Email" /> </div>
                 <!-- <div class="invalid" *ngIf="f['email'].invalid && (f['email'].dirty || f['email'].touched)"> -->
                 <div *ngIf="f['email'].touched && f['email'].invalid">
                     <div *ngIf="f['email'].errors && f['email'].errors['required']">
@@ -20,7 +20,7 @@
 
             <div class="form-group">
                 <label> Password</label>
-                <div> <input type="password" class="form-control" formControlName="password" placeholder="**********" /> </div>
+                <div> <input type="password" class="form-control" formControlName="password" placeholder="Enter Your Password" /> </div>
                 <div class="invalid"
                     *ngIf="f['password'].invalid && (f['password'].dirty || f['password'].touched) ">
                     Password is required. </div>

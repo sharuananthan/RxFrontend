@@ -1,7 +1,4 @@
-import { Component, AfterViewInit, ViewChild } from '@angular/core';
-import { MatSidenav } from '@angular/material/sidenav';
-import { delay } from 'rxjs/operators';
-import { BreakpointObserver } from '@angular/cdk/layout';
+import { Component, AfterViewInit} from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -10,23 +7,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./side-nav.component.css'],
 })
 export class SideNavComponent implements AfterViewInit {
-  @ViewChild(MatSidenav)
-  sidenav!: MatSidenav;
 
-  constructor(private observer: BreakpointObserver, private router: Router) {}
+
+  constructor(private router: Router) {}
   ngAfterViewInit(): void {
-    this.observer
-      .observe(['(max-width: 800px)'])
-      .pipe(delay(1))
-      .subscribe((res) => {
-        if (res.matches) {
-          this.sidenav.mode = 'over';
-          this.sidenav.close();
-        } else {
-          this.sidenav.mode = 'side';
-          this.sidenav.open();
-        }
-      });
   }
   isDashboard() {
     return this.router.url == '/dashboard';
@@ -40,8 +24,8 @@ export class SideNavComponent implements AfterViewInit {
   isProduct() {
     return this.router.url == '/product';
   }
-  isTransaction() {
-    return this.router.url == '/transaction';
+  isBill() {
+    return this.router.url == '/bill';
   }
   isreports() {
     return this.router.url == '/reports';

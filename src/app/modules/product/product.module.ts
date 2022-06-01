@@ -8,9 +8,12 @@ import { ProductPlanComponent } from './productMain/product-plan/product-plan.co
 import {MatTableModule} from '@angular/material/table';
 import { MatTabsModule } from '@angular/material/tabs';
 import { AddProductComponent } from './addProduct/add-product.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import {  ReactiveFormsModule } from '@angular/forms';
 import { AddPlanComponent } from './addPlan/add-plan.component';
-
+import { ProductDetailsComponent } from './productDetails/product-details/product-details.component';
+import {MatDividerModule} from '@angular/material/divider';
+import { PlanTableComponent } from './productDetails/plan-table/plan-table.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 
 @NgModule({
@@ -20,6 +23,9 @@ import { AddPlanComponent } from './addPlan/add-plan.component';
     ProductPlanComponent,
     AddProductComponent,
     AddPlanComponent,
+    ProductDetailsComponent,
+    PlanTableComponent,
+   
     
   ],
   imports: [
@@ -28,7 +34,10 @@ import { AddPlanComponent } from './addPlan/add-plan.component';
     ProductRoutes,
     MatTableModule,
     MatTabsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatDividerModule,
+    MatPaginatorModule
+    
   ],exports: [
 
   ]

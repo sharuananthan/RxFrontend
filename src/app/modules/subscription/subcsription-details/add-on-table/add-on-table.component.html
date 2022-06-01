@@ -1,0 +1,43 @@
+
+<div class="form-group">
+  <input
+    type="text"
+    placeholder="Search"
+    class="form-control"
+    [(ngModel)]="searchKey"
+  />
+</div>
+<table mat-table [dataSource]="dataSource">
+  <ng-container matColumnDef="addOnName">
+    <th mat-header-cell *matHeaderCellDef>AddOn Name</th>
+    <td mat-cell *matCellDef="let addOnUsage">{{ addOnUsage.addOnName }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="date">
+    <th mat-header-cell *matHeaderCellDef>Consumed Date</th>
+    <td mat-cell *matCellDef="let addOnUsage">{{ addOnUsage.date }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="units">
+    <th mat-header-cell *matHeaderCellDef>Units</th>
+    <td mat-cell *matCellDef="let addOnUsage">{{ addOnUsage.units }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="cost">
+    <th mat-header-cell *matHeaderCellDef>Cost</th>
+    <td mat-cell *matCellDef="let addOnUsage">{{ addOnUsage.cost }}</td>
+  </ng-container>
+
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr
+    mat-row
+    (click)="openDialog(row)"
+    *matRowDef="let row; columns: displayedColumns"
+  ></tr>
+</table>
+<mat-paginator
+  [pageSizeOptions]="[5]"
+  showFirstLastButtons
+  aria-label="Select page of periodic elements"
+>

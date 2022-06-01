@@ -1,24 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { ProductService } from 'src/app/data/service/Product/product.service';
+import { Product } from 'src/app/data/schema/product.model'
+import { MatTableDataSource } from '@angular/material/table';
+import { Router } from '@angular/router';
+import { MatPaginator } from '@angular/material/paginator';
 
-
-
-export interface PeriodicElement {
-  name: string;
-  id: number;
-  plans: number;
-  logo: any;
-  addons: number;
-  url: string;
-  
-
-}
-
-const ELEMENT_DATA: PeriodicElement[] = [
-  {logo: "../../../assets/icons/c1.png" , id:8699643, name: 'Flowdoh', plans: 5, addons: 9, url: 'H'},
-  {logo: "../../../assets/icons/c2.png" , id:9234445, name: 'Enadoc Sign', plans: 3, addons: 9, url: 'H'},
-  {logo: "../../../assets/icons/c3.png" , id:1344345, name: 'Skale', plans: 4, addons: 9, url: 'H'},
-  {logo: "../../../assets/icons/c4.png" , id:9587755, name: 'Enodoc', plans: 3, addons: 9, url: 'H'}
-]
 
 
 @Component({
@@ -26,17 +12,40 @@ const ELEMENT_DATA: PeriodicElement[] = [
   templateUrl: './product-table.component.html',
   styleUrls: ['./product-table.component.css']
 })
-export class ProductTableComponent implements OnInit {
- 
-  displayedColumns: string[] = ['logo', 'id', 'name', 'plans',  'addons', 'url'];
-  data = ELEMENT_DATA;
-  clickedRows = new Set<PeriodicElement>();
-  productCount : string ='3';
+export class ProductTableComponent implements AfterViewInit, OnInit {
 
-  
-  constructor() { }
+  products: Product[] = [];
+  displayedColumns: String[] = ['logoURL', 'productId', 'name', 'planCount', 'addOnCount', 'redirectUrl'];
+
+  productCount: string = '3';
+  dataSource = new MatTableDataSource();
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
+
+  constructor(private _router: Router,private productservice: ProductService) { }
+
+ // ProductList: any = [];
 
   ngOnInit(): void {
+    this.getProducts();
+  }
+
+  ngAfterViewInit() {
+    this.dataSource.paginator = this.paginator;
+  }
+
+  getProducts() {
+    this.productservice.getProducts().subscribe((data: Product[]) => {
+      this.products = data;
+      this.dataSource.data = this.products
+      //console.log(this.dataSource)
+
+    });
+  }
+
+
+
+  navigate(row: any) {
+    this._router.navigate(['/product/details', row.productId]);
   }
 
 }

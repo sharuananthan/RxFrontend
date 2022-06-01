@@ -1,22 +1,25 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { NotFoundComponent } from './shared/components/not-found/not-found.component';
 import { TopBarComponent } from './shared/components/top-bar/top-bar.component';
+
 
 const routes: Routes = [
   {
     path: '',
     loadChildren: () =>
-      import('./modules/home/home.module').then((m) => m.HomeModule),
+      import('./modules/home/home.module').then((m) => m.HomeModule)
   },
+
   {
     path: 'auth',
     loadChildren: () =>
       import('./modules/auth/auth.module').then((m) => m.AuthModule),
   },
   {
-    path: 'transaction',
+    path: 'bill',
     loadChildren: () =>
-      import('./modules/transaction/transaction.module').then(
+      import('./modules/bill/bill.module').then(
         (m) => m.TransactionModule
       ),
   },
@@ -58,9 +61,20 @@ const routes: Routes = [
       import('./modules/reports/reports.module').then((m) => m.ReportsModule),
   },
   {
+    path: 'marketplace',
+    loadChildren: () =>
+      import('./modules/marketplace/marketplace.module').then((m) => m.MarketplaceModule),
+
+  },
+  {
     path: 'top',
     component: TopBarComponent,
   },
+  { path: '404', component: NotFoundComponent },
+  {
+    path:'**',redirectTo:'404'
+  },
+  
 ];
 
 @NgModule({
