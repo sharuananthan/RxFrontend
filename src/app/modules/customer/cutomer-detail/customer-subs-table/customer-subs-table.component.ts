@@ -13,7 +13,7 @@ import { SubscriptionService } from 'src/app/data/service/Subscription/subscript
 export class CustomerSubsTableComponent implements AfterViewInit, OnInit {
   customerSubscriptions: CustomerSubscription[] = [];
   customerId!: string;
-  displayedColumns: string[] = ['subscriptionId','product','plan','createdDate','endDate','status'];
+  displayedColumns: string[] = ['product','plan','createdDate','endDate','status'];
   dataSource = new MatTableDataSource<CustomerSubscription>();
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   constructor(
