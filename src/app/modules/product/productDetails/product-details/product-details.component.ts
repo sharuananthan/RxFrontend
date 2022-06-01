@@ -26,25 +26,11 @@ export class ProductDetailsComponent implements OnInit {
  
 
   getProductById(productId:string){
-    this.productservice.getProductById(this.productID).subscribe(resp => {
-      this.product = {
-        
-        productId: resp.productId,
-        name: resp.name,
-        description: resp.description,
-        redirectUrl:resp.redirectUrl,
-        webhookURL: resp.webhookURL,
-        webhookSecret: resp.webhookSecret,
-        logoURL:resp.logoURL,
-        freeTrialDays: resp.freeTrialDays,
-        planCount:resp.planCount,
-        addOnCount:resp.addOnCount,
-
-
-      };
+    this.productservice.getProductById(productId).subscribe(resp => {
+      this.product =resp ;
 
     
-    });
+    })
   }
 
 
