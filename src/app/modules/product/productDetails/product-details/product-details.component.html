@@ -11,6 +11,8 @@
         </div>
         <mat-divider></mat-divider>
       </div>
+<div class="flex-container">
+
 
       <div class="details-container">
 
@@ -30,10 +32,15 @@
           <div>{{product.redirectURL}}</div>
           <div>{{product.webhookURL}}</div>
           <div>{{product.webhookSecret}}</div>
-
           <div>{{product.freeTrialDays}}</div>
         </div>
+
+       
       </div>
+      <div class="logo"> <img [src]="product.logoURL" height="140px" width="140px"> </div>
+
+    </div>
+
       <div>
 
       </div>
