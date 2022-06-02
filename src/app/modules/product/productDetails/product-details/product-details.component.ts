@@ -9,19 +9,19 @@ import { Product } from 'src/app/data/schema/product.model'
   styleUrls: ['./product-details.component.css']
 })
 export class ProductDetailsComponent implements OnInit {
-  productID:string;
+  productId:string;
   product!: Product ;
   
  
 
 
   constructor(public _activatedRoute: ActivatedRoute,public router: Router, private productservice:ProductService) {
-    this.productID = this._activatedRoute.snapshot.paramMap.get('id')||'';
+    this.productId = this._activatedRoute.snapshot.paramMap.get('id')||'';
   }
 
   ngOnInit(): void {
    
-    this.getProductById(this.productID);
+    this.getProductById(this.productId);
   }
  
 
@@ -31,6 +31,9 @@ export class ProductDetailsComponent implements OnInit {
 
     
     })
+  }
+  navigateToAddPlan(){
+    this.router.navigate(['/product/'+this.productId+'/addPlan'])
   }
 
 

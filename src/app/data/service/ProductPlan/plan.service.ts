@@ -16,11 +16,10 @@ export class PlanService {
     return this.http.get<Plan[]>(this.APIUrl+`/${productId}/plan`);
   }
 
-  postPlan(plan:any): Observable<any> {
+  postPlan(productId:string,plan:any): Observable<any> {
     //console.log(plan)
-    return this.http.post<any>(this.APIUrl, plan);
+    return this.http.post<any>(this.APIUrl+`/${productId}/plan`, plan);
 
   }
 
-
-}
+} 
