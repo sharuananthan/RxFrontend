@@ -36,5 +36,20 @@ export class ProductDetailsComponent implements OnInit {
     this.router.navigate(['/product/'+this.productId+'/addPlan'])
   }
 
+  navigateToProductList(){
+    this.router.navigate(['/product'])}
+
+  onDelete(productId: string) {
+    if (confirm('Are you sure to delete this record ?') == true) {
+      this.productservice.deleteProduct(productId).subscribe((res) => {
+      });
+      this.router.navigate([`/product`]);
+    }
+  }
+
+ 
+
+
+  
 
 }

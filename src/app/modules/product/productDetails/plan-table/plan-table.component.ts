@@ -13,6 +13,7 @@ import { Product } from 'src/app/data/schema/product.model'
 })
 export class PlanTableComponent implements  OnInit {
   productId!:string;
+  planId!:string;
   product!: Product ;
 
   dataSource = new MatTableDataSource();
@@ -33,6 +34,21 @@ export class PlanTableComponent implements  OnInit {
       //console.log(this.dataSource)
 
     });
+  }
+
+  // deletePlan(planId: string) {
+  //   this.planservice.deletePlan(planId).subscribe(res => {
+  //     this.getPlan(this.productId);
+  //   }
+  // }
+
+
+  onDelete(planId: string,productId:string) {
+    if (confirm('Are you sure to delete this record ?') == true) {
+      this.planservice.deletePlan(this.planId, this.productId).subscribe((res) => {
+      });
+      this.router.navigate([`/detail/${this.productId}`]);
+    }
   }
 
 }
